@@ -1,0 +1,62 @@
+{% extends '@EasyAdmin/default/layout.html.twig' %}
+
+{% block content_title 'Matches ('~ (matches|length) ~' requests)' %}
+{% block content_footer_wrapper '' %}
+
+{% block main %}
+    {% for match in matches %}
+        <div class="p-3">
+            <div class="row align-items-center">
+                <div class="col-5">
+                    {% trans %}admin.requester{% endtrans %} <strong>{{ match.requester.firstName }} {{ match.requester.lastName }}</strong>
+                    ({{ match.requester.jobType }})
+
+                    {% if match.requester.ccFirstName %}
+                        <br />
+                        {% trans %}admin.helped-by{% endtrans %} <strong>{{ match.requester.ccFirstName }} {{ match.requester.ccLastName }}</strong>
+                    {% endif %}
+
+                    <ul class="m-0">
+                        {% for need in match.needs %}
+                            <li>
+                                {{ need.helpType }}
+
+                                {% if need.helpType == 'babysit' %}
+                                    (age range: {{ need.childAgeRange }})
+                                {% endif %}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="col-1 text-center">
+                    {{ match.requester.zipCode }}
+                </div>
+                <div class="col-2 text-center {{ match.score ? 'text-success' : 'text-danger' }}">
+                    <strong>
+                        {{ match.score ? 'Has helpers' : 'No helper' }}
+                    </strong>
+
+                    {% if match.groceries and match.groceries.matchedHelpers %}
+                        <br />
+                        Groceries max score: {{ match.groceries.matchedHelpers[0].score }}
+                    {% endif %}
+
+                    {% if match.babysit and match.babysit.matchedHelpers %}
+                        <br />
+                        Babysit max score: {{ match.babysit.matchedHelpers[0].score }}
+                    {% endif %}
+                </div>
+                <div class="col-2">
+                    <a href="{{ path('admin_match', {'ownerUuid': match.requester.ownerUuid}) }}" class="btn btn-secondary">
+                        View helpers
+                    </a>
+                </div>
+                <div class="col-2 text-center">
+                    {{ match.requester.createdAt|date('d/m/Y H:i') }}
+                </div>
+            </div>
+        </div>
+
+        <hr class="m-0" />
+    {% endfor %}
+{% endblock %}

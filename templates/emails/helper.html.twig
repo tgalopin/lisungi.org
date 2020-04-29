@@ -1,0 +1,27 @@
+<p>
+    {% trans with {'name': helper.firstName} %}email.greeting{% endtrans %}
+</p>
+
+<p>
+    {% trans %}email.offer-thanks{% endtrans %}
+</p>
+
+<p>
+    {% trans %}email.offer-saved{% endtrans %}
+</p>
+
+<p>
+    {% trans with {'url': path('process_helper_view', {'uuid': helper.uuid}) } %}email.offer-edit{% endtrans %}
+</p>
+
+<p>
+    {% trans %}email.offer-notified{% endtrans %}
+</p>
+
+<p>
+    {% trans %}email.offer-commitment{% endtrans %}
+</p>
+
+<p>
+    {% trans %}email.signoff{% endtrans %}
+</p>

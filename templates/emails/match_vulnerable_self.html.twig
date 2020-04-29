@@ -1,0 +1,30 @@
+<p>
+    {% trans with {'requester': requester.firstName|capitalize, 'helper':helper.firstName|capitalize } %}email.greeting-match{% endtrans %}
+</p>
+
+<p>
+    {% trans %}email.good-news{% endtrans %}
+</p>
+
+<p>
+    {% trans with {'zipcode': requester.zipCode } %}email.postcode-match{% endtrans %}
+    {% trans with {'requester': requester.firstName|capitalize, 'helper': helper.firstName|capitalize, 'zipcode': requester.zipCode } %}email.groceries{% endtrans %}
+</p>
+
+<p>
+    {% trans with {'requester': requester.firstName|capitalize } %}email.at-risk{% endtrans %}
+</p>
+
+<p>
+    {% trans %}email.up-to-you{% endtrans %}
+</p>
+
+<p>
+    {% trans %}email.both-copied{% endtrans %}
+</p>
+
+{{ include('emails/_include/guidelines_global.html.twig', { type: 'groceries' }) }}
+
+{{ include('emails/_include/guidelines_groceries.html.twig') }}
+
+{{ include('emails/_include/footer.html.twig') }}

@@ -1,0 +1,141 @@
+{% extends '@EasyAdmin/default/layout.html.twig' %}
+
+{% block content_title 'Match' %}
+{% block content_footer_wrapper '' %}
+
+{% block main %}
+    <div class="p-3">
+        {% trans %}admin.requester{% endtrans %}
+        <br />
+        <strong>{{ match.requester.firstName }} {{ match.requester.lastName }}</strong> ({{ match.requester.zipCode }})
+
+        {% if match.requester.ccFirstName %}
+            <br />
+            {% trans %}admin.helped-by{% endtrans %}aidé par <strong>{{ match.requester.ccFirstName }} {{ match.requester.ccLastName }}</strong>
+        {% endif %}
+
+        <br />
+        {% trans %}admin.job-type{% endtrans %} {{ match.requester.jobType }}
+        <br />
+        {% trans %}label.date{% endtrans %} {{ match.requester.createdAt|date('d/m/Y H:i') }}
+    </div>
+
+    {% if match.groceries is not null %}
+        <hr class="m-0" />
+
+        <div class="p-4">
+            <div class="row align-items-center mb-5">
+                <div class="col-6">
+                    <strong>{% trans with{'name': match.requester.firstName } %}admin.needs-shopping{% endtrans %}</strong>
+                </div>
+                <div class="col-6">
+                    <a href="{{ path('admin_match_close', {'type': 'groceries', 'ownerUuid': match.requester.ownerUuid}) }}"
+                       class="btn btn-secondary mr-2">
+                        {% trans %}admin.close-requirement{% endtrans %}
+                    </a>
+                    <small>{% trans %}admin.close-requirement-help{% endtrans %}</small>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                {% trans with{'number': match.groceries|length } %}admin.count-shopping-match{% endtrans %}
+            </div>
+
+            <ul>
+                {% for matchedHelper in match.groceries.matchedHelpers[0:20] %}
+                    <li class="mb-3">
+                        <div class="row align-items-center">
+                            <div class="col-5">
+                                <strong>{{ matchedHelper.helper.firstName }} {{ matchedHelper.helper.lastName }}</strong>
+                                ({{ matchedHelper.helper.zipCode }})
+                                <br />
+                                {% trans %}label.score{% endtrans %} {{ matchedHelper.score }}
+                                ({{ matchedHelper.helper.canBabysit ? 'admin.can-babysit'|trans : 'admin.not-babysit'|trans }})
+                                <br />
+                                {{ matchedHelper.helper.age }} {% trans %}label.years{% endtrans %}
+                            </div>
+                            <div class="col-7">
+                                <a href="{{ path('admin_match_close', {'type': 'groceries', 'ownerUuid': match.requester.ownerUuid, 'id': matchedHelper.helper.id}) }}"
+                                   class="btn btn-secondary mb-2 mr-4">
+                                    <i class="fa fa-paper-plane mr-1"></i>
+                                    {% trans %}admin.send-and-close{% endtrans %}
+                                </a>
+                                <a href="{{ path('admin_match_block', {'ownerUuid': match.requester.ownerUuid, 'id': matchedHelper.helper.id}) }}"
+                                   class="btn btn-link mb-2">
+                                    <i class="fa fa-times mr-1"></i>
+                                    {% trans %}admin.block-match{% endtrans %}
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+
+    {% if match.babysit is not null %}
+        <hr class="m-0" />
+
+        <div class="p-4">
+            <div class="row align-items-center mb-5">
+                <div class="col-6">
+                    <div class="mb-2">
+                        <strong>{% trans with {'name': match.requester.firstName, 'number': match.babysitNeeds|length } %}admin.needs-babysitting{% endtrans %}</strong>
+                    </div>
+                    {% trans %}label.ages{% endtrans %}
+                    {% for need in match.babysitNeeds %}
+                        <span class="badge badge-secondary">{{ need.childAgeRange }}</span>
+                    {% endfor %}
+                </div>
+                <div class="col-6">
+                    <a href="{{ path('admin_match_close', {'type': 'babysit', 'ownerUuid': match.requester.ownerUuid}) }}"
+                       class="btn btn-secondary mr-2">
+                        {% trans %}admin.close-requirement{% endtrans %}
+                    </a>
+                    <small>{% trans %}admin.close-requirement-help{% endtrans %}</small>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                {% trans with{'number': match.babysit|length } %}admin.count-babysitting-match{% endtrans %}
+            </div>
+
+            <ul>
+                {% for matchedHelper in match.babysit.matchedHelpers[0:20] %}
+                    <li class="mb-4">
+                        <div class="row align-items-center">
+                            <div class="col-5">
+                                <strong>{{ matchedHelper.helper.firstName }} {{ matchedHelper.helper.lastName }}</strong>
+                                ({{ matchedHelper.helper.zipCode }})
+                                <br />
+                                {% trans %}label.score{% endtrans %} {{ matchedHelper.score }}
+                                <br />
+                                {{ matchedHelper.helper.age }} {% trans %}label.years{% endtrans %},
+                                {{ matchedHelper.helper.haveChildren ? 'label.has-children'|trans : 'label.no-children'|trans }}
+                                <br />
+                                {% trans with {'number': matchedHelper.helper.babysitMaxChildren } %}admin.can-babysit-count{% endtrans %}
+                                <br />
+                                {% trans %}admin.accepts-ages{% endtrans %}
+                                {% for range in matchedHelper.helper.babysitAgeRanges %}
+                                    <span class="badge badge-secondary">{{ range }}</span>
+                                {% endfor %}
+                            </div>
+                            <div class="col-7">
+                                <a href="{{ path('admin_match_close', {'type': 'babysit', 'ownerUuid': match.requester.ownerUuid, 'id': matchedHelper.helper.id}) }}"
+                                   class="btn btn-secondary mb-2 mr-4">
+                                    <i class="fa fa-paper-plane mr-1"></i>
+                                    {% trans %}admin.send-and-close{% endtrans %}
+                                </a>
+                                <a href="{{ path('admin_match_block', {'ownerUuid': match.requester.ownerUuid, 'id': matchedHelper.helper.id}) }}"
+                                   class="btn btn-link mb-2">
+                                    <i class="fa fa-times mr-1"></i>
+                                    {% trans %}admin.block-match{% endtrans %}
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,30 @@
+<p>
+    {% trans with {'requester': requester.firstName|capitalize, 'cc': requester.ccFirstName|capitalize, 'helper':helper.firstName|capitalize } %}email.greeting-vulnerable{% endtrans %}
+</p>
+
+<p>
+    {% trans %}email.good-news{% endtrans %}
+</p>
+
+<p>
+    {% trans with {'requester': requester.firstName|capitalize, 'helper': helper.firstName|capitalize, 'zipcode': requester.zipCode } %}email.postcode-match-vulnerable{% endtrans %}
+    {% trans with {'requester': requester.firstName|capitalize, 'cc': requester.ccFirstName|capitalize, 'helper': helper.firstName|capitalize, 'zipcode': requester.zipCode } %}email.groceries-vulnerable{% endtrans %}
+</p>
+
+<p>
+    {% trans with {'requester': requester.firstName|capitalize } %}email.at-risk{% endtrans %}
+</p>
+
+<p>
+    {% trans %}email.up-to-you{% endtrans %}
+</p>
+
+<p>
+    {% trans %}email.three-copied{% endtrans %}
+</p>
+
+{{ include('emails/_include/guidelines_global.html.twig', { type: 'groceries' }) }}
+
+{{ include('emails/_include/guidelines_groceries.html.twig') }}
+
+{{ include('emails/_include/footer.html.twig') }}

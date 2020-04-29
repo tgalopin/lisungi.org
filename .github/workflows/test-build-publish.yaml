@@ -1,0 +1,48 @@
+name: Test
+
+on: [push, pull_request]
+
+jobs:
+    coding-style:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@master
+            - name: php-cs-fixer
+              run: |
+                  wget https://github.com/FriendsOfPHP/PHP-CS-Fixer/releases/download/v2.16.1/php-cs-fixer.phar -q
+                  php php-cs-fixer.phar fix --dry-run --diff
+
+    tests:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@master
+            - uses: shivammathur/setup-php@v2
+              with:
+                  php-version: '7.4'
+                  tools: symfony
+            - name: Build assets
+              run: yarn install && yarn build
+            - name: Install dependencies
+              run: composer install --prefer-dist --no-interaction --no-ansi --no-progress --no-suggest
+            - name: Start services
+              run: docker-compose up -d && sleep 3
+            - name: Prepare database
+              run: symfony console doctrine:migrations:migrate -n && symfony console doctrine:fixtures:load -n
+            - name: PHPUnit
+              run: symfony run phpunit
+
+    release:
+        runs-on: ubuntu-latest
+        needs: [coding-style, tests]
+        if: github.ref == 'refs/heads/master'
+        steps:
+            - uses: actions/checkout@master
+            - name: Build assets
+              run: yarn install && yarn build
+            - name: Build and publish production image
+              uses: elgohr/Publish-Docker-Github-Action@master
+              with:
+                  name: tgalopin/enpremiereligne.fr/website
+                  username: ${{ secrets.GITHUB_DOCKER_USERNAME }}
+                  password: ${{ secrets.GITHUB_DOCKER_PASSWORD }}
+                  registry: docker.pkg.github.com

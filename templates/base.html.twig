@@ -1,0 +1,79 @@
+{% set current_route = app.request.attributes.get('_route') %}
+{% set current_route_params = app.request.attributes.get('_route_params') %}
+{% set localized_assets_folder = app.request.locale ~ '/' %}
+
+<!DOCTYPE html>
+<html lang="{{ app.request.locale }}">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>{% block title %}{% trans %}site.name{% endtrans %} | {% trans %}site.title{% endtrans %}{% endblock %}</title>
+
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="referrer" content="origin" />
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900&display=swap" rel="stylesheet">
+    {{ encore_entry_link_tags('lib') }}
+    {{ encore_entry_link_tags('app') }}
+
+    <link rel="canonical" href="{% block meta_canonical current_route ? url(current_route, current_route_params) : '' %}" />
+    <meta name="description" content="{% block meta_description 'site.description'|trans %}" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset(localized_assets_folder ~ 'apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset(localized_assets_folder ~ 'favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset(localized_assets_folder ~ 'favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ asset(localized_assets_folder ~ 'site.webmanifest') }}">
+    <link rel="mask-icon" href="{{ asset(localized_assets_folder ~ 'safari-pinned-tab.svg') }}" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#0077cc">
+    <meta name="theme-color" content="#0077cc">
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="{% trans %}site.name{% endtrans %}" />
+    <meta property="og:url" content="{{ block('meta_canonical') }}" />
+    <meta property="og:title" content="{{ block('title') }}" />
+    <meta property="og:description" content="{{ block('meta_description') }}" />
+    <meta property="og:image" content="{% block meta_image (url('homepage')|trim('/')) ~ asset(localized_assets_folder ~ 'res/sharer-v3.jpg') %}" />
+    <meta property="og:image:width" content="{% block meta_image_width 2400 %}" />
+    <meta property="og:image:height" content="{% block meta_image_height 1260 %}" />
+    {% block metas '' %}
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{ block('title') }}" />
+    <meta name="twitter:description" content="{{ block('meta_description') }}" />
+    <meta name="twitter:image" content="{{ block('meta_image') }}" />
+
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "Organization",
+            "url": "{{ block('meta_canonical') }}",
+            "name": "{% trans %}site.name{% endtrans %}",
+            "logo": "{{ (url('homepage')|trim('/')) ~ asset(localized_assets_folder ~ 'res/logo.svg') }}",
+            "description": "{{ block('meta_description') }}"
+        }
+    </script>
+</head>
+<body class="{% block body_class '' %}" data-locale="{{ app.request.locale }}">
+    {% block body '' %}
+
+    {% block javascripts '' %}
+
+    {% if not app.debug %}
+        <script>
+            (function(f, a, t, h, o, m){
+                a[h]=a[h]||function(){
+                    (a[h].q=a[h].q||[]).push(arguments)
+                };
+                o=f.createElement('script'),
+                    m=f.getElementsByTagName('script')[0];
+                o.async=1; o.src=t; o.id='fathom-script';
+                m.parentNode.insertBefore(o,m)
+            })(document, window, '//{{ analytics_server }}/tracker.js', 'fathom');
+            fathom('set', 'siteId', 'AIIIL');
+            fathom('trackPageview');
+        </script>
+    {% endif %}
+</body>
+</html>

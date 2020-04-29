@@ -1,0 +1,27 @@
+<p>
+    {% trans with {'name': request.firstName} %}email.greeting{% endtrans %}
+</p>
+
+<p>
+    {% trans %}email.request-thanks{% endtrans %}
+</p>
+
+<p>
+    {% trans %}email.request-saved{% endtrans %}
+</p>
+
+<p>
+    {% trans with {'url': path('process_requester_view', {'ownerUuid': ownerUuid}) } %}email.request-edit{% endtrans %}
+</p>
+
+<p>
+    {% trans %}email.request-notified{% endtrans %}
+</p>
+
+<p>
+    {% trans %}email.request-commitment{% endtrans %}
+</p>
+
+<p>
+    {% trans %}email.signoff{% endtrans %}
+</p>

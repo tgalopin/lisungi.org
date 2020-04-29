@@ -1,0 +1,26 @@
+{% extends 'page_base.html.twig' %}
+
+{% block metas %}
+    <meta name="robots" content="noindex">
+{% endblock %}
+
+{% block content %}
+    <div class="process-box">
+        <div class="bg-light p-3 p-lg-4">
+            <h3 class="text-center font-weight-bold mb-4">
+                {% trans %}request.my-request{% endtrans %}
+            </h3>
+
+            <div class="process-details text-center">
+                {% trans %}request.removed{% endtrans %}
+
+                <div class="mt-4">
+                    <a href="{{ path('homepage') }}"
+                       class="btn btn-link">
+                        {% trans %}label.home{% endtrans %}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

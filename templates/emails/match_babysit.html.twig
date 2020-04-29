@@ -1,0 +1,25 @@
+<p>
+    {% trans with {'requester': requester.firstName|capitalize, 'helper':helper.firstName|capitalize } %}email.greeting-match{% endtrans %}
+</p>
+
+<p>
+    {% trans %}email.good-news{% endtrans %}
+</p>
+
+<p>
+    {% trans with {'zipcode': requester.zipCode } %}email.postcode-match{% endtrans %}
+    {% trans with {'count': needs.babysitNeeds, 'requester': requester.firstName|capitalize, 'ages': needs.babysitAgesList, 'helper': helper.firstName|capitalize } %}email.baysit{% endtrans %}
+    {% trans with {'helper': helper.firstName|capitalize, 'age': helper.age } %}email.helper-age{% endtrans %}{% if helper.haveChildren %}{% trans %}email.also-parent{% endtrans %}{% endif %}.
+</p>
+
+<p>
+    {% trans %}email.up-to-you{% endtrans %}
+</p>
+
+<p>
+    {% trans %}email.both-copied{% endtrans %}
+</p>
+
+{{ include('emails/_include/guidelines_global.html.twig', { type: 'babysit' }) }}
+
+{{ include('emails/_include/footer.html.twig') }}
