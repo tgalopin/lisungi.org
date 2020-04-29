@@ -52,7 +52,7 @@ class HomeController extends AbstractController
 
             if (!$repository->isHashAlreadyInvited($hash)) {
                 $email = (new TemplatedEmail())
-                    ->from('team@enpremiereligne.fr')
+                    ->from('team@lisungi.org')
                     ->to($invite->email)
                     ->subject($invite->firstName.' pense qu\'En Première Ligne peut vous aider !')
                     ->htmlTemplate('emails/fr_FR/invite.html.twig')

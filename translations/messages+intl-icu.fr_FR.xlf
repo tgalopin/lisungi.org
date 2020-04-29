@@ -11,8 +11,8 @@
                 <target>Soyons présents pour ceux en première ligne</target>
             </trans-unit>
             <trans-unit id="site.url" resname="site.url">
-                <source>https://enpremiereligne.fr</source>
-                <target>https://enpremiereligne.fr</target>
+                <source>https://lisungi.org</source>
+                <target>https://lisungi.org</target>
             </trans-unit>
             <trans-unit id="site.description" resname="site.description">
                 <source>Face à l’épidémie de Covid-19, certains d\'entre nous sont en première ligne de la lutte pour
@@ -33,8 +33,8 @@
             </trans-unit>
 
             <trans-unit id="footer.why" resname="footer.why">
-                <source>Pourquoi enpremiereligne.fr ?</source>
-                <target>Pourquoi enpremiereligne.fr ?</target>
+                <source>Pourquoi lisungi.org ?</source>
+                <target>Pourquoi lisungi.org ?</target>
             </trans-unit>
             <trans-unit id="footer.who" resname="footer.who">
                 <source>Qui sommes-nous ?</source>
@@ -62,9 +62,9 @@
             </trans-unit>
             <trans-unit id="footer.data-statement" resname="footer.data-statement">
                 <source>
-                    <![CDATA[Vous disposez d'un droit d'accès, de rectification, d’effacement et de portabilité de vos données ainsi que d’un droit d'opposition et d'un droit de limitation du traitement des données vous concernant. Vous pouvez exercer vos droits en nous contactant à l'adresse suivante : <a href="mailto:titouan@enpremiereligne.fr">titouan@enpremiereligne.fr</a>.]]></source>
+                    <![CDATA[Vous disposez d'un droit d'accès, de rectification, d’effacement et de portabilité de vos données ainsi que d’un droit d'opposition et d'un droit de limitation du traitement des données vous concernant. Vous pouvez exercer vos droits en nous contactant à l'adresse suivante : <a href="mailto:titouan@lisungi.org">titouan@lisungi.org</a>.]]></source>
                 <target>
-                    <![CDATA[Vous disposez d'un droit d'accès, de rectification, d’effacement et de portabilité de vos données ainsi que d’un droit d'opposition et d'un droit de limitation du traitement des données vous concernant. Vous pouvez exercer vos droits en nous contactant à l'adresse suivante : <a href="mailto:titouan@enpremiereligne.fr">titouan@enpremiereligne.fr</a>.]]></target>
+                    <![CDATA[Vous disposez d'un droit d'accès, de rectification, d’effacement et de portabilité de vos données ainsi que d’un droit d'opposition et d'un droit de limitation du traitement des données vous concernant. Vous pouvez exercer vos droits en nous contactant à l'adresse suivante : <a href="mailto:titouan@lisungi.org">titouan@lisungi.org</a>.]]></target>
             </trans-unit>
 
             <trans-unit id="social.share-intro" resname="social.share-intro">
@@ -236,9 +236,9 @@
             </trans-unit>
             <trans-unit id="home.testimonial-two" resname="home.testimonial-two">
                 <source>
-                    <![CDATA[J'ai commencé mon confinement le vendredi 13 mars, avant la fermeture des bars et des lieux publics. Travaillant dans l'informatique, j'ai pu facilement me mettre en sécurité et arrêter toute sortie.<br /><br />Si le personnel médical est en première ligne, pour ma part, j'ai l'impression d'être dans un bunker. J'ai presque honte de la chance que j'ai.<br /><br />Je me suis inscrit sur enpremiereligne.fr car je veux aider ceux qui en ont besoin. En m'inscrivant, j'ai été mis en relation avec une personne qui est infirmière dans ma ville. Pour l'instant, elle a encore des réserves de nourriture pour plusieurs jours, mais elle sait que dans les prochains jours, quand la crise sanitaire aura pris encore plus d'ampleur, elle pourra compter sur moi.]]></source>
+                    <![CDATA[J'ai commencé mon confinement le vendredi 13 mars, avant la fermeture des bars et des lieux publics. Travaillant dans l'informatique, j'ai pu facilement me mettre en sécurité et arrêter toute sortie.<br /><br />Si le personnel médical est en première ligne, pour ma part, j'ai l'impression d'être dans un bunker. J'ai presque honte de la chance que j'ai.<br /><br />Je me suis inscrit sur lisungi.org car je veux aider ceux qui en ont besoin. En m'inscrivant, j'ai été mis en relation avec une personne qui est infirmière dans ma ville. Pour l'instant, elle a encore des réserves de nourriture pour plusieurs jours, mais elle sait que dans les prochains jours, quand la crise sanitaire aura pris encore plus d'ampleur, elle pourra compter sur moi.]]></source>
                 <target>
-                    <![CDATA[J'ai commencé mon confinement le vendredi 13 mars, avant la fermeture des bars et des lieux publics. Travaillant dans l'informatique, j'ai pu facilement me mettre en sécurité et arrêter toute sortie.<br /><br />Si le personnel médical est en première ligne, pour ma part, j'ai l'impression d'être dans un bunker. J'ai presque honte de la chance que j'ai.<br /><br />Je me suis inscrit sur enpremiereligne.fr car je veux aider ceux qui en ont besoin. En m'inscrivant, j'ai été mis en relation avec une personne qui est infirmière dans ma ville. Pour l'instant, elle a encore des réserves de nourriture pour plusieurs jours, mais elle sait que dans les prochains jours, quand la crise sanitaire aura pris encore plus d'ampleur, elle pourra compter sur moi.]]></target>
+                    <![CDATA[J'ai commencé mon confinement le vendredi 13 mars, avant la fermeture des bars et des lieux publics. Travaillant dans l'informatique, j'ai pu facilement me mettre en sécurité et arrêter toute sortie.<br /><br />Si le personnel médical est en première ligne, pour ma part, j'ai l'impression d'être dans un bunker. J'ai presque honte de la chance que j'ai.<br /><br />Je me suis inscrit sur lisungi.org car je veux aider ceux qui en ont besoin. En m'inscrivant, j'ai été mis en relation avec une personne qui est infirmière dans ma ville. Pour l'instant, elle a encore des réserves de nourriture pour plusieurs jours, mais elle sait que dans les prochains jours, quand la crise sanitaire aura pris encore plus d'ampleur, elle pourra compter sur moi.]]></target>
             </trans-unit>
             <trans-unit id="home.testimonial-two-from" resname="home.testimonial-two-from">
                 <source>- Alexandre, ingénieur dans le Nord</source>
@@ -396,11 +396,11 @@
             </trans-unit>
             <trans-unit id="request.details" resname="request.details">
                 <source>Les lignes suivantes correspondent à vos différents besoins et pourront être adressées par
-                    différents volontaires. Vous serez bien sûr maître de qui vous aide ou non : enpremiereligne.fr aide
+                    différents volontaires. Vous serez bien sûr maître de qui vous aide ou non : lisungi.org aide
                     simplement à la mise en relation.
                 </source>
                 <target>Les lignes suivantes correspondent à vos différents besoins et pourront être adressées par
-                    différents volontaires. Vous serez bien sûr maître de qui vous aide ou non : enpremiereligne.fr aide
+                    différents volontaires. Vous serez bien sûr maître de qui vous aide ou non : lisungi.org aide
                     simplement à la mise en relation.
                 </target>
             </trans-unit>
@@ -664,10 +664,10 @@
             </trans-unit>
             <trans-unit id="label.confirm" resname="label.confirm">
                 <source>J'ai lu et j'accepte la Politique de confidentialité et les Conditions d'utilisation
-                    d'enpremiereligne.fr
+                    d'lisungi.org
                 </source>
                 <target>J'ai lu et j'accepte la Politique de confidentialité et les Conditions d'utilisation
-                    d'enpremiereligne.fr
+                    d'lisungi.org
                 </target>
             </trans-unit>
             <trans-unit id="help.confirm" resname="help.confirm">
@@ -1026,8 +1026,8 @@
                 </target>
             </trans-unit>
             <trans-unit id="email.offer-edit" resname="email.offer-edit">
-                <source><![CDATA[<a href="https://enpremiereligne.fr{url}">Gérer ma proposition d'aide</a>]]></source>
-                <target><![CDATA[<a href="https://enpremiereligne.fr{url}">Gérer ma proposition d'aide</a>]]></target>
+                <source><![CDATA[<a href="https://lisungi.org{url}">Gérer ma proposition d'aide</a>]]></source>
+                <target><![CDATA[<a href="https://lisungi.org{url}">Gérer ma proposition d'aide</a>]]></target>
             </trans-unit>
             <trans-unit id="email.offer-notified" resname="email.offer-notified">
                 <source>Vous serez notifié(e) par mail dès qu'un travailleur mobilisé en première ligne ou une personne
@@ -1255,9 +1255,9 @@
             </trans-unit>
             <trans-unit id="email.site-helped" resname="email.site-helped">
                 <source>
-                    <![CDATA[PS : si notre plateforme vous a aidé(e), n'hésitez pas à nous le dire à <a href="mailto:team@enpremiereligne.fr">team@enpremiereligne.fr</a>. Nous sommes à votre disposition !]]></source>
+                    <![CDATA[PS : si notre plateforme vous a aidé(e), n'hésitez pas à nous le dire à <a href="mailto:team@lisungi.org">team@lisungi.org</a>. Nous sommes à votre disposition !]]></source>
                 <target>
-                    <![CDATA[PS : si notre plateforme vous a aidé(e), n'hésitez pas à nous le dire à <a href="mailto:team@enpremiereligne.fr">team@enpremiereligne.fr</a>. Nous sommes à votre disposition !]]></target>
+                    <![CDATA[PS : si notre plateforme vous a aidé(e), n'hésitez pas à nous le dire à <a href="mailto:team@lisungi.org">team@lisungi.org</a>. Nous sommes à votre disposition !]]></target>
             </trans-unit>
 
             <trans-unit id="email.avoid-contact" resname="email.avoid-contact">
@@ -1375,8 +1375,8 @@
                 </target>
             </trans-unit>
             <trans-unit id="email.request-edit" resname="email.request-edit">
-                <source><![CDATA[<a href="https://enpremiereligne.fr{url}">Gérer ma demande d'aide</a>]]></source>
-                <target><![CDATA[<a href="https://enpremiereligne.fr{url}">Gérer ma demande d'aide</a>]]></target>
+                <source><![CDATA[<a href="https://lisungi.org{url}">Gérer ma demande d'aide</a>]]></source>
+                <target><![CDATA[<a href="https://lisungi.org{url}">Gérer ma demande d'aide</a>]]></target>
             </trans-unit>
             <trans-unit id="email.request-notified" resname="email.request-notified">
                 <source>Vous serez notifié(e) par mail dès qu'un volontaire de votre zone proposera une aide

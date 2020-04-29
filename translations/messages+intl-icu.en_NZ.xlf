@@ -11,7 +11,7 @@
                 <target>Let's stop the spread together!</target>
             </trans-unit>
             <trans-unit id="footer.why" resname="footer.why">
-                <source>Pourquoi enpremiereligne.fr&#xA0;?</source>
+                <source>Pourquoi lisungi.org&#xA0;?</source>
                 <target>Why thecommunitywave.nz?</target>
             </trans-unit>
             <trans-unit id="footer.who" resname="footer.who">
@@ -42,7 +42,7 @@
                 <source>Vous disposez d'un droit d'acc&#xE8;s, de rectification, d&#x2019;effacement et de portabilit&#xE9;
                     de vos donn&#xE9;es ainsi que d&#x2019;un droit d'opposition et d'un droit de limitation du
                     traitement des donn&#xE9;es vous concernant. Vous pouvez exercer vos droits en nous contactant
-                    &#xE0; l'adresse suivante : &lt;a href="mailto:titouan@enpremiereligne.fr"&gt;titouan@enpremiereligne.fr&lt;/a&gt;.
+                    &#xE0; l'adresse suivante : &lt;a href="mailto:titouan@lisungi.org"&gt;titouan@lisungi.org&lt;/a&gt;.
                 </source>
                 <target>You have access, rectification, deletion and portability rights on your data, as well as the
                     right to oppose or limit the use of your personal data. You can exercise your rights by contacting
@@ -181,7 +181,7 @@
                     publics. Travaillant dans l'informatique, j'ai pu facilement me mettre en s&#xE9;curit&#xE9; et arr&#xEA;ter
                     toute sortie.&lt;br /&gt;&lt;br /&gt;Si le personnel m&#xE9;dical est en premi&#xE8;re ligne, pour
                     ma part, j'ai l'impression d'&#xEA;tre dans un bunker. J'ai presque honte de la chance que j'ai.&lt;br
-                    /&gt;&lt;br /&gt;Je me suis inscrit sur enpremiereligne.fr car je veux aider ceux qui en ont besoin.
+                    /&gt;&lt;br /&gt;Je me suis inscrit sur lisungi.org car je veux aider ceux qui en ont besoin.
                     En m'inscrivant, j'ai &#xE9;t&#xE9; mis en relation avec une personne qui est infirmi&#xE8;re dans
                     ma ville. Pour l'instant, elle a encore des r&#xE9;serves de nourriture pour plusieurs jours, mais
                     elle sait que dans les prochains jours, quand la crise sanitaire aura pris encore plus d'ampleur,
@@ -371,7 +371,7 @@
                 <source>Les lignes suivantes correspondent &#xE0; vos diff&#xE9;rents besoins et pourront &#xEA;tre
                     adress&#xE9;es par
                     diff&#xE9;rents volontaires. Vous serez bien s&#xFB;r ma&#xEE;tre de qui vous aide ou non :
-                    enpremiereligne.fr aide
+                    lisungi.org aide
                     simplement &#xE0; la mise en relation.
                 </source>
                 <target>The following lines correspond to your needs, and can be addressed by different volunteers. You
@@ -635,7 +635,7 @@
             </trans-unit>
             <trans-unit id="label.confirm" resname="label.confirm">
                 <source>J'ai lu et j'accepte la Politique de confidentialit&#xE9; et les Conditions d'utilisation
-                    d'enpremiereligne.fr
+                    d'lisungi.org
                 </source>
                 <target>I have read and I accept the Privacy policy and the Conditions of use of thecommunitywave.nz
                 </target>
@@ -876,7 +876,7 @@
                 <target>Your help offer has been registered. You can check it and delete it at this link :</target>
             </trans-unit>
             <trans-unit id="email.offer-edit" resname="email.offer-edit">
-                <source>&lt;a href="https://enpremiereligne.fr{url}"&gt;G&#xE9;rer ma proposition d'aide&lt;/a&gt;
+                <source>&lt;a href="https://lisungi.org{url}"&gt;G&#xE9;rer ma proposition d'aide&lt;/a&gt;
                 </source>
                 <target>&lt;a href="https://thecommunitywave.nz{url}"&gt;Manage my help offer&lt;/a&gt;</target>
             </trans-unit>
@@ -918,7 +918,7 @@
                 <target>Your help request has been registered. You can check it and delete it at this link :</target>
             </trans-unit>
             <trans-unit id="email.request-edit" resname="email.request-edit">
-                <source>&lt;a href="https://enpremiereligne.fr{url}"&gt;G&#xE9;rer ma demande d'aide&lt;/a&gt;</source>
+                <source>&lt;a href="https://lisungi.org{url}"&gt;G&#xE9;rer ma demande d'aide&lt;/a&gt;</source>
                 <target>&lt;a href="https://thecommunitywave.nz{url}"&gt;Manage my help request&lt;/a&gt;</target>
             </trans-unit>
             <trans-unit id="email.request-notified" resname="email.request-notified">
@@ -961,7 +961,7 @@
                 </target>
             </trans-unit>
             <trans-unit id="site.url" resname="site.url">
-                <source>https://enpremiereligne.fr</source>
+                <source>https://lisungi.org</source>
                 <target>https://thecommunitywave.nz</target>
             </trans-unit>
             <trans-unit id="label.groceries" resname="label.groceries">
@@ -1273,7 +1273,7 @@
             </trans-unit>
             <trans-unit id="email.site-helped" resname="email.site-helped">
                 <source>PS : si notre plateforme vous a aid&#xE9;(e), n'h&#xE9;sitez pas &#xE0; nous le dire &#xE0; &lt;a
-                    href="mailto:team@enpremiereligne.fr"&gt;team@enpremiereligne.fr&lt;/a&gt;. Nous sommes &#xE0; votre
+                    href="mailto:team@lisungi.org"&gt;team@lisungi.org&lt;/a&gt;. Nous sommes &#xE0; votre
                     disposition !
                 </source>
                 <target>PS : if our platform has helped you, feel free to let us know at &lt;a
