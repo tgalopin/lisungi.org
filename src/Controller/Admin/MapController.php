@@ -16,7 +16,7 @@ class MapController extends AbstractController
      */
     public function requests(StatisticsAggregator $statsAgg)
     {
-        return $this->render('admin/map/fr_FR/requests.svg.twig', [
+        return $this->render('admin/map/fr_CD/requests.svg.twig', [
             'departmentCounts' => $statsAgg->countOwnersByDepartment(),
         ]);
     }
@@ -39,7 +39,7 @@ class MapController extends AbstractController
      */
     public function helpersDepartment(StatisticsAggregator $statsAgg, string $number)
     {
-        $response = $this->render('admin/map/fr_FR/helpers_department.svg.twig', [
+        $response = $this->render('admin/map/fr_CD/helpers_department.svg.twig', [
             'department' => $number,
             'helpersCount' => $statsAgg->countDepartmentHelpers($number),
         ]);

@@ -19,7 +19,7 @@ class ContentController extends AbstractController
 
     /**
      * @Route({
-     *     "fr_FR": "/comment-ca-marche",
+     *     "fr_CD": "/comment-ca-marche",
      *     "en_NZ": "/how-this-works"
      * }, name="content_how")
      */
@@ -38,7 +38,7 @@ class ContentController extends AbstractController
 
     /**
      * @Route({
-     *     "fr_FR": "/pourquoi",
+     *     "fr_CD": "/pourquoi",
      *     "en_NZ": "/why"
      * }, name="content_why")
      */
@@ -49,7 +49,7 @@ class ContentController extends AbstractController
 
     /**
      * @Route({
-     *     "fr_FR": "/qui-sommes-nous",
+     *     "fr_CD": "/qui-sommes-nous",
      *     "en_NZ": "/who-are-we"
      * }, name="content_who")
      */
@@ -60,7 +60,7 @@ class ContentController extends AbstractController
 
     /**
      * @Route({
-     *     "fr_FR": "/politique-de-confidentialite",
+     *     "fr_CD": "/politique-de-confidentialite",
      *     "en_NZ": "/privacy-policy"
      * }, name="content_privacy")
      */
@@ -71,7 +71,7 @@ class ContentController extends AbstractController
 
     /**
      * @Route({
-     *     "fr_FR": "/conditions-d-utilisation",
+     *     "fr_CD": "/conditions-d-utilisation",
      *     "en_NZ": "/terms-of-use"
      * }, name="content_conditions")
      */
@@ -82,7 +82,7 @@ class ContentController extends AbstractController
 
     /**
      * @Route({
-     *     "fr_FR": "/mentions-legales",
+     *     "fr_CD": "/mentions-legales",
      *     "en_NZ": "/legal-statement"
      * }, name="content_legalities")
      */
@@ -93,7 +93,7 @@ class ContentController extends AbstractController
 
     /**
      * @Route({
-     *     "fr_FR": "/informations-officielles",
+     *     "fr_CD": "/informations-officielles",
      *     "en_NZ": "/official-information"
      * }, name="content_links")
      */

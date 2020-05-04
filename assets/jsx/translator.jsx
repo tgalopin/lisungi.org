@@ -1,9 +1,7 @@
-import fr_FR from './translations/fr_FR';
-import en_NZ from './translations/en_NZ';
+import fr_CD from './translations/fr_CD';
 
 const translations = {
-    fr_FR: fr_FR,
-    en_NZ: en_NZ,
+    fr_CD: fr_CD,
 };
 
 export function trans(key) {

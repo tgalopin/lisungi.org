@@ -55,7 +55,7 @@ class HomeController extends AbstractController
                     ->from('team@lisungi.org')
                     ->to($invite->email)
                     ->subject($invite->firstName.' pense qu\'En Première Ligne peut vous aider !')
-                    ->htmlTemplate('emails/fr_FR/invite.html.twig')
+                    ->htmlTemplate('emails/fr_CD/invite.html.twig')
                     ->context([
                         'invite' => $invite,
                         'countTotalHelpers' => ceil($aggregator->countTotalHelpers() / 100) * 100,

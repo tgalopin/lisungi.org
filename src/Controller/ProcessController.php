@@ -26,7 +26,7 @@ class ProcessController extends AbstractController
 {
     /**
      * @Route({
-     *     "fr_FR": "/je-peux-aider",
+     *     "fr_CD": "/je-peux-aider",
      *     "en_NZ": "/i-can-help"
      * }, name="process_helper")
      */
@@ -67,7 +67,7 @@ class ProcessController extends AbstractController
 
     /**
      * @Route({
-     *     "fr_FR": "/je-peux-aider/{uuid}",
+     *     "fr_CD": "/je-peux-aider/{uuid}",
      *     "en_NZ": "/i-can-help/{uuid}"
      * }, name="process_helper_view")
      */
@@ -81,7 +81,7 @@ class ProcessController extends AbstractController
 
     /**
      * @Route({
-     *     "fr_FR": "/je-peux-aider/{uuid}/supprimer",
+     *     "fr_CD": "/je-peux-aider/{uuid}/supprimer",
      *     "en_NZ": "/i-can-help/{uuid}/remove"
      * }, name="process_helper_delete_confirm")
      */
@@ -92,7 +92,7 @@ class ProcessController extends AbstractController
 
     /**
      * @Route({
-     *     "fr_FR": "/je-peux-aider/{uuid}/supprimer/do",
+     *     "fr_CD": "/je-peux-aider/{uuid}/supprimer/do",
      *     "en_NZ": "/i-can-help/{uuid}/remove/process"
      * }, name="process_helper_delete_do")
      */
@@ -109,7 +109,7 @@ class ProcessController extends AbstractController
 
     /**
      * @Route({
-     *     "fr_FR": "/je-peux-aider/supprimer/effectue",
+     *     "fr_CD": "/je-peux-aider/supprimer/effectue",
      *     "en_NZ": "/i-can-help/remove/done"
      * }, name="process_helper_delete_done")
      */
@@ -120,7 +120,7 @@ class ProcessController extends AbstractController
 
     /**
      * @Route({
-     *     "fr_FR": "/j-ai-besoin-d-aide",
+     *     "fr_CD": "/j-ai-besoin-d-aide",
      *     "en_NZ": "/i-need-help"
      * }, name="process_request")
      */
@@ -164,7 +164,7 @@ class ProcessController extends AbstractController
 
     /**
      * @Route({
-     *     "fr_FR": "/j-ai-besoin-d-aide-risque",
+     *     "fr_CD": "/j-ai-besoin-d-aide-risque",
      *     "en_NZ": "/at-risk-need-help"
      * }, name="process_request_vulnerable")
      */
@@ -211,7 +211,7 @@ class ProcessController extends AbstractController
 
     /**
      * @Route({
-     *     "fr_FR": "/j-ai-besoin-d-aide/{ownerUuid}",
+     *     "fr_CD": "/j-ai-besoin-d-aide/{ownerUuid}",
      *     "en_NZ": "/i-need-help/{ownerUuid}"
      * }, name="process_requester_view")
      */
@@ -230,7 +230,7 @@ class ProcessController extends AbstractController
 
     /**
      * @Route({
-     *     "fr_FR": "/j-ai-besoin-d-aide/{ownerUuid}/supprimer",
+     *     "fr_CD": "/j-ai-besoin-d-aide/{ownerUuid}/supprimer",
      *     "en_NZ": "/i-need-help/{ownerUuid}/remove"
      * }, name="process_requester_delete_confirm")
      */
@@ -241,7 +241,7 @@ class ProcessController extends AbstractController
 
     /**
      * @Route({
-     *     "fr_FR": "/j-ai-besoin-d-aide/{ownerUuid}/supprimer/do",
+     *     "fr_CD": "/j-ai-besoin-d-aide/{ownerUuid}/supprimer/do",
      *     "en_NZ": "/i-need-help/{ownerUuid}/remove/process"
      * }, name="process_requester_delete_do")
      */
@@ -258,7 +258,7 @@ class ProcessController extends AbstractController
 
     /**
      * @Route({
-     *     "fr_FR": "/j-ai-besoin-d-aide/supprimer/effectue",
+     *     "fr_CD": "/j-ai-besoin-d-aide/supprimer/effectue",
      *     "en_NZ": "/i-need-help/{ownerUuid}/remove/done"
      * }, name="process_requester_delete_done")
      */

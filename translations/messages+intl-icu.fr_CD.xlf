@@ -3,12 +3,12 @@
     <file source-language="fr" target-language="fr" datatype="plaintext" original="file.ext">
         <body>
             <trans-unit id="site.name" resname="site.name">
-                <source>En première ligne</source>
-                <target>En première ligne</target>
+                <source>Lisungi</source>
+                <target>Lisungi</target>
             </trans-unit>
             <trans-unit id="site.title" resname="site.title">
-                <source>Soyons présents pour ceux en première ligne</source>
-                <target>Soyons présents pour ceux en première ligne</target>
+                <source>Pasi na Yo Pasi na Ngai</source>
+                <target>Pasi na Yo Pasi na Ngai</target>
             </trans-unit>
             <trans-unit id="site.url" resname="site.url">
                 <source>https://lisungi.org</source>
@@ -155,65 +155,61 @@
 
 
             <trans-unit id="home.byline" resname="home.byline">
-                <source>Réseau d'entraide dans la lutte contre l'épidémie de Covid-19.</source>
-                <target>Réseau d'entraide dans la lutte contre l'épidémie de Covid-19.</target>
+                <source>Pasi na Yo Pasi na Ngai.</source>
+                <target>Pasi na Yo Pasi na Ngai.</target>
             </trans-unit>
             <trans-unit id="home.work-title" resname="home.work-title">
-                <source>Je travaille en première ligne et j'ai besoin d'aide</source>
-                <target>Je travaille en première ligne et j'ai besoin d'aide</target>
+                <source>Je travaille en première ligne et j'ai besoin de matériel ou de denrées alimentaires</source>
+                <target>Je travaille en première ligne et j'ai besoin de matériel ou de denrées alimentaires</target>
             </trans-unit>
             <trans-unit id="home.work-intro" resname="home.work-intro">
-                <source>Vous faites partie de la première ligne de la lutte contre le virus (soignants, services
-                    d’urgence, approvisionnement en énergie, nourriture, médicaments, matériel, ...) ?
+                <source>
+                    Vous faites partie de la première ligne de la lutte contre le virus (personnels soignants,
+                    membres de la cellule nationale de riposte, centre de prise en charge des patients à
+                    pathologies chroniques (diabétique, anémique), ...) ?
                 </source>
-                <target>Vous faites partie de la première ligne de la lutte contre le virus (soignants, services
-                    d’urgence, approvisionnement en énergie, nourriture, médicaments, matériel, ...) ?
+                <target>
+                    Vous faites partie de la première ligne de la lutte contre le virus (personnels soignants,
+                    membres de la cellule nationale de riposte, centre de prise en charge des patients à
+                    pathologies chroniques (diabétique, anémique), ...) ?
                 </target>
             </trans-unit>
             <trans-unit id="home.work-request" resname="home.work-request">
-                <source>Demandez de l'aide à des volontaires proches de chez vous pour garder vos enfants ou faire vos
-                    courses.
+                <source>
+                    Demandez de l'aide à des volontaires proches de chez vous pour des dons de matériel ou
+                    de denrées alimentaires.
                 </source>
-                <target>Demandez de l'aide à des volontaires proches de chez vous pour garder vos enfants ou faire vos
-                    courses.
+                <target>
+                    Demandez de l'aide à des volontaires proches de chez vous pour des dons de matériel ou
+                    de denrées alimentaires.
                 </target>
-            </trans-unit>
-            <trans-unit id="home.risk-title" resname="home.risk-title">
-                <source>Je fais partie des populations à risque ou je connais une personne dans ce cas</source>
-                <target>Je fais partie des populations à risque ou je connais une personne dans ce cas</target>
-            </trans-unit>
-            <trans-unit id="home.risk-intro" resname="home.risk-intro">
-                <source>Vous ou un de vos proches, de par l'âge, les antécédents médicaux ou les difficultés à se
-                    déplacer, a besoin d'aide pour faire les courses et faire face à l'épidémie ?
-                </source>
-                <target>Vous ou un de vos proches, de par l'âge, les antécédents médicaux ou les difficultés à se
-                    déplacer, a besoin d'aide pour faire les courses et faire face à l'épidémie ?
-                </target>
-            </trans-unit>
-            <trans-unit id="home.risk-request" resname="home.risk-request">
-                <source>Demandez de l'aide à des volontaires proches de chez vous.</source>
-                <target>Demandez de l'aide à des volontaires proches de chez vous.</target>
             </trans-unit>
             <trans-unit id="home.title" resname="home.title">
-                <source>Je peux aider les travailleurs en première ligne et les personnes faisant partie des populations
-                    à risque
+                <source>
+                    Je peux donner aux travailleurs en première ligne du matériel ou des denrées alimentaires
                 </source>
-                <target>Je peux aider les travailleurs en première ligne et les personnes faisant partie des populations
-                    à risque
+                <target>
+                    Je peux donner aux travailleurs en première ligne du matériel ou des denrées alimentaires
                 </target>
             </trans-unit>
             <trans-unit id="home.young-healthy" resname="home.young-healthy">
-                <source>Vous êtes jeune et en bonne santé ?</source>
-                <target>Vous êtes jeune et en bonne santé ?</target>
+                <source>
+                    Vous disposez de matériel ou de denrées dont vous vous ne servez pas (matériel médical,
+                    denrées alimentaires, médicaments, savon, matelas, ...) ?
+                </source>
+                <target>
+                    Vous disposez de matériel ou de denrées dont vous vous ne servez pas (matériel médical,
+                    denrées alimentaires, médicaments, savon, matelas, ...) ?
+                </target>
             </trans-unit>
             <trans-unit id="home.intro" resname="home.intro">
-                <source>Aidez un travailleur en première ligne ou une personne faisant partie des populations à risque
-                    vivant proche de chez vous en gardant un enfant ou en faisant des courses, et engagez-vous dans la
-                    lutte contre l’épidémie.
+                <source>
+                    Faites un don à un travailleur en première ligne proche de chez vous pour vous engager
+                    dans la lutte contre l’épidémie.
                 </source>
-                <target>Aidez un travailleur en première ligne ou une personne faisant partie des populations à risque
-                    vivant proche de chez vous en gardant un enfant ou en faisant des courses, et engagez-vous dans la
-                    lutte contre l’épidémie.
+                <target>
+                    Faites un don à un travailleur en première ligne proche de chez vous pour vous engager
+                    dans la lutte contre l’épidémie.
                 </target>
             </trans-unit>
             <trans-unit id="home.number-volunteers" resname="home.number-volunteers">
