@@ -16,7 +16,7 @@
                         </h1>
 
                         <a href="{{ path('homepage') }}">
-                            <img src="{{ asset(localized_assets_folder ~ 'res/logo.svg') }}" class="home-header-logo" alt="{% trans %}site.name{% endtrans %}" />
+                            <img src="{{ asset(localized_assets_folder ~ 'res/logo.png') }}" class="home-header-logo" alt="{% trans %}site.name{% endtrans %}" />
                         </a>
                     </div>
                     <div class="col-12 col-xl-3 text-center text-xl-right home-header-socials">
@@ -126,40 +126,44 @@
                     {% trans with {'percentage' : (((countTotalOwners - countUnmatchedOwners) / countTotalOwners) * 100)|number_format(2) } %}home.percentage-resolved{% endtrans %}
                 </h5>
 
-                <h5>
-                    {% trans %}label.testimonials{% endtrans %}
-                </h5>
+                {#
+                    <h5>
+                        {% trans %}label.testimonials{% endtrans %}
+                    </h5>
 
-                <div class="row">
-                    <div class="col-12 col-lg-6">
-                        <div class="p-3 p-lg-5">
-                            <blockquote>
-                                <div>
-                                    <p>
-                                        {% trans %}home.testimonial-one{% endtrans %}
-                                    </p>
+                    <div class="row">
+                        <div class="col-12 col-lg-6">
+                            <div class="p-3 p-lg-5">
+                                <blockquote>
+                                    <div>
+                                        <p>
+                                            {% trans %}home.testimonial-one{% endtrans %}
+                                        </p>
 
-                                    <cite>{% trans %}home.testimonial-one-from{% endtrans %}</cite>
-                                </div>
-                            </blockquote>
+                                        <cite>{% trans %}home.testimonial-one-from{% endtrans %}</cite>
+                                    </div>
+                                </blockquote>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-12 col-lg-6">
-                        <div class="p-3 p-lg-5">
-                            <blockquote>
-                                <div>
-                                    <p>
-                                        {% trans %}home.testimonial-two{% endtrans %}
-                                    </p>
+                        <div class="col-12 col-lg-6">
+                            <div class="p-3 p-lg-5">
+                                <blockquote>
+                                    <div>
+                                        <p>
+                                            {% trans %}home.testimonial-two{% endtrans %}
+                                        </p>
 
-                                    <cite>{% trans %}home.testimonial-two-from{% endtrans %}</cite>
-                                </div>
-                            </blockquote>
+                                        <cite>{% trans %}home.testimonial-two-from{% endtrans %}</cite>
+                                    </div>
+                                </blockquote>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                {% include '_include/' ~ app.request.locale ~ '/homepage_footer.html.twig' %}
+                #}
             </div>
-            {% include '_include/' ~ app.request.locale ~ '/homepage_footer.html.twig' %}
         </div>
 
         {{ include('_include/footer.html.twig') }}

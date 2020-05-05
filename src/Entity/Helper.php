@@ -2,7 +2,6 @@
 
 namespace App\Entity;
 
-use App\Validator\Constraints as EPLAssert;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
@@ -54,57 +53,70 @@ class Helper
     public ?string $email = '';
 
     /**
-     * @ORM\Column(length=10)
+     * @ORM\Column(length=50)
      *
-     * @Assert\NotBlank(message="postcode.required")
-     * @Assert\Length(max=5)
-     * @EPLAssert\ZipCode()
+     * @Assert\NotBlank(message="locality.required")
      */
-    public ?string $zipCode = '';
-
-    /**
-     * @ORM\Column(type="smallint")
-     *
-     * @Assert\NotBlank(message="age.required")
-     * @Assert\GreaterThanOrEqual(18)
-     * @Assert\LessThanOrEqual(70)
-     */
-    public ?int $age = null;
+    public ?string $locality = '';
 
     /**
      * @ORM\Column(type="boolean")
      */
-    public ?bool $haveChildren = false;
+    public ?bool $isCompany = false;
 
     /**
-     * @ORM\Column(type="boolean")
+     * @ORM\Column(type="integer")
      */
-    public ?bool $canBabysit = false;
+    public ?int $masks = 0;
 
     /**
-     * @ORM\Column(type="smallint")
+     * @ORM\Column(type="integer")
+     */
+    public ?int $glasses = 0;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    public ?int $blouses = 0;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    public ?int $gel = 0;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    public ?int $gloves = 0;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    public ?int $disinfectant = 0;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    public ?int $paracetamol = 0;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    public ?int $soap = 0;
+
+    /**
+     * @ORM\Column(length=250, nullable=true)
      *
-     * @Assert\GreaterThanOrEqual(1)
-     * @Assert\LessThanOrEqual(4, message="babysit.too-many")
+     * @Assert\Length(max=250)
      */
-    public ?int $babysitMaxChildren = 1;
+    public ?string $food = null;
 
     /**
-     * @ORM\Column(type="simple_array", nullable=true)
+     * @ORM\Column(length=250, nullable=true)
      *
-     * @Assert\All(@Assert\Choice(callback={"App\Entity\HelpRequest", "getAgeRanges"}))
+     * @Assert\Length(max=250)
      */
-    public ?array $babysitAgeRanges = [];
-
-    /**
-     * @ORM\Column(type="boolean")
-     */
-    public ?bool $canBuyGroceries = false;
-
-    /**
-     * @ORM\Column(type="boolean")
-     */
-    public ?bool $acceptVulnerable = false;
+    public ?string $other = null;
 
     /**
      * @ORM\Column(type="datetime")

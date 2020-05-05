@@ -34,9 +34,9 @@
                 <source>L'adresse e-mail est requise.</source>
                 <target>L'adresse e-mail est requise.</target>
             </trans-unit>
-            <trans-unit id="postcode.required" resname="postcode.required">
-                <source>Votre code postal est requis.</source>
-                <target>Votre code postal est requis.</target>
+            <trans-unit id="locality.required" resname="locality.required">
+                <source>Votre commune est requise.</source>
+                <target>Votre commune est requise.</target>
             </trans-unit>
             <trans-unit id="postcode-at-risk.required" resname="postcode-at-risk.required">
                 <source>Le code postal est requis.</source>

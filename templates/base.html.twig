@@ -50,7 +50,7 @@
             "@type": "Organization",
             "url": "{{ block('meta_canonical') }}",
             "name": "{% trans %}site.name{% endtrans %}",
-            "logo": "{{ (url('homepage')|trim('/')) ~ asset(localized_assets_folder ~ 'res/logo.svg') }}",
+            "logo": "{{ (url('homepage')|trim('/')) ~ asset(localized_assets_folder ~ 'res/logo.png') }}",
             "description": "{{ block('meta_description') }}"
         }
     </script>

@@ -15,16 +15,6 @@ use Symfony\Component\Validator\Constraints as Assert;
  */
 class HelpRequest
 {
-    public const TYPE_BABYSIT = 'babysit';
-    public const TYPE_GROCERIES = 'groceries';
-
-    public const AGE_RANGE_01 = '0-1';
-    public const AGE_RANGE_12 = '1-2';
-    public const AGE_RANGE_35 = '3-5';
-    public const AGE_RANGE_69 = '6-9';
-    public const AGE_RANGE_1012 = '10-12';
-    public const AGE_RANGE_13 = '13-';
-
     /**
      * @ORM\Id
      * @ORM\GeneratedValue
@@ -44,55 +34,92 @@ class HelpRequest
 
     /**
      * @ORM\Column(length=100)
+     *
+     * @Assert\NotBlank(message="name-first.required")
+     * @Assert\Length(max=100)
      */
     public ?string $firstName;
 
     /**
      * @ORM\Column(length=100)
+     *
+     * @Assert\NotBlank(message="name-last.required")
+     * @Assert\Length(max=100)
      */
     public ?string $lastName;
 
     /**
      * @ORM\Column(length=200)
+     *
+     * @Assert\NotBlank(message="email.required")
+     * @Assert\Email()
+     * @Assert\Length(max=200)
      */
     public ?string $email;
 
     /**
-     * @ORM\Column(length=200, nullable=true)
-     */
-    public ?string $ccEmail;
-
-    /**
-     * @ORM\Column(length=100, nullable=true)
-     */
-    public ?string $ccFirstName;
-
-    /**
-     * @ORM\Column(length=100, nullable=true)
-     */
-    public ?string $ccLastName;
-
-    /**
-     * @ORM\Column(length=10)
-     */
-    public ?string $zipCode;
-
-    /**
      * @ORM\Column(length=50)
-     */
-    public ?string $jobType;
-
-    /**
-     * @ORM\Column(length=20)
-     */
-    public ?string $helpType;
-
-    /**
-     * @ORM\Column(length=10, nullable=true)
      *
-     * @Assert\Choice(callback="getAgeRanges")
+     * @Assert\NotBlank(message="locality.required")
      */
-    public ?string $childAgeRange;
+    public ?string $locality = '';
+
+    /**
+     * @ORM\Column(length=100, nullable=true)
+     */
+    public ?string $organization = null;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    public ?int $masks = 0;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    public ?int $glasses = 0;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    public ?int $blouses = 0;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    public ?int $gel = 0;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    public ?int $gloves = 0;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    public ?int $disinfectant = 0;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    public ?int $paracetamol = 0;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    public ?int $soap = 0;
+
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    public ?bool $food = false;
+
+    /**
+     * @ORM\Column(length=250, nullable=true)
+     *
+     * @Assert\Length(max=250)
+     */
+    public ?string $other = null;
 
     /**
      * @ORM\Column(type="boolean")
@@ -113,18 +140,6 @@ class HelpRequest
     {
         $this->uuid = Uuid::uuid4();
         $this->createdAt = new \DateTime();
-    }
-
-    public static function getAgeRanges()
-    {
-        return [
-            self::AGE_RANGE_01,
-            self::AGE_RANGE_12,
-            self::AGE_RANGE_35,
-            self::AGE_RANGE_69,
-            self::AGE_RANGE_1012,
-            self::AGE_RANGE_13,
-        ];
     }
 
     public function getId(): ?int
