@@ -43,6 +43,6 @@ jobs:
               uses: elgohr/Publish-Docker-Github-Action@master
               with:
                   name: tgalopin/lisungi.org/website
-                  username: ${{ secrets.GITHUB_DOCKER_USERNAME }}
-                  password: ${{ secrets.GITHUB_DOCKER_PASSWORD }}
+                  username: ${{ secrets.LISUNGI_DOCKER_USERNAME }}
+                  password: ${{ secrets.LISUNGI_DOCKER_PASSWORD }}
                   registry: docker.pkg.github.com
