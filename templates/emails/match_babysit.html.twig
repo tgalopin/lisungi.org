@@ -3,21 +3,21 @@
 </p>
 
 <p>
-    {% trans %}email.good-news{% endtrans %}
+    {{ 'email.good-news'|trans }}
 </p>
 
 <p>
     {% trans with {'zipcode': requester.zipCode } %}email.postcode-match{% endtrans %}
     {% trans with {'count': needs.babysitNeeds, 'requester': requester.firstName|capitalize, 'ages': needs.babysitAgesList, 'helper': helper.firstName|capitalize } %}email.baysit{% endtrans %}
-    {% trans with {'helper': helper.firstName|capitalize, 'age': helper.age } %}email.helper-age{% endtrans %}{% if helper.haveChildren %}{% trans %}email.also-parent{% endtrans %}{% endif %}.
+    {% trans with {'helper': helper.firstName|capitalize, 'age': helper.age } %}email.helper-age{% endtrans %}{% if helper.haveChildren %}{{ 'email.also-parent'|trans }}{% endif %}.
 </p>
 
 <p>
-    {% trans %}email.up-to-you{% endtrans %}
+    {{ 'email.up-to-you'|trans }}
 </p>
 
 <p>
-    {% trans %}email.both-copied{% endtrans %}
+    {{ 'email.both-copied'|trans }}
 </p>
 
 {{ include('emails/_include/guidelines_global.html.twig', { type: 'babysit' }) }}

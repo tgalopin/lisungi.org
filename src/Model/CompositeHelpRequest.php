@@ -3,7 +3,6 @@
 namespace App\Model;
 
 use App\Entity\HelpRequest;
-use App\Validator\Constraints as EPLAssert;
 use Ramsey\Uuid\UuidInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\Validator\Context\ExecutionContextInterface;
@@ -16,33 +15,36 @@ class CompositeHelpRequest
      */
     public ?string $firstName = '';
 
-    /**
-     */
     public ?string $lastName = '';
 
-    /**
-     */
     public ?string $email = '';
 
     /**
-     * @Assert\NotBlank(message="postcode.required")
-     * @Assert\Length(max=5)
-     * @EPLAssert\ZipCode()
+     * @ORM\Column(length=50)
+     *
+     * @Assert\NotBlank(message="locality.required")
      */
-    public ?string $zipCode = '';
+    public ?string $locality = '';
 
     /**
-     * @Assert\NotBlank()
-     * @Assert\Choice({"health", "emergency", "care", "food", "drugs", "energy", "transports", "other"})
+     * @ORM\Column(length=100, nullable=true)
      */
-    public ?string $jobType = '';
+    public ?string $organization = null;
 
     /**
      * @var array|CompositeHelpRequestDetail[]
      *
      * @Assert\Valid()
      */
-    public array $details = [];
+    public array $details;
+
+    public function __construct()
+    {
+        $this->details = [];
+        foreach (HelpRequest::getTypes() as $type) {
+            $this->details[$type] = new CompositeHelpRequestDetail($type);
+        }
+    }
 
     /**
      * @Assert\Callback()
@@ -58,15 +60,20 @@ class CompositeHelpRequest
     {
         $requests = [];
         foreach ($this->details as $detail) {
+            if (!$detail->need) {
+                continue;
+            }
+
             $request = new HelpRequest();
             $request->ownerUuid = $ownerUuid;
             $request->firstName = $this->firstName;
             $request->lastName = $this->lastName;
             $request->email = strtolower($this->email);
-            $request->zipCode = $this->zipCode;
-            $request->jobType = $this->jobType;
-            $request->helpType = $detail->helpType;
-            $request->childAgeRange = $detail->childAgeRange;
+            $request->organization = $this->organization;
+            $request->locality = $this->locality;
+            $request->type = $detail->getType();
+            $request->quantity = $detail->quantity;
+            $request->details = $detail->details;
 
             $requests[] = $request;
         }

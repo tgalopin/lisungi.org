@@ -8,7 +8,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <title>{% block title %}{% trans %}site.name{% endtrans %} | {% trans %}site.title{% endtrans %}{% endblock %}</title>
+    <title>{% block title 'site.name'|trans %}</title>
 
     <meta name="msapplication-tap-highlight" content="no" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -30,7 +30,7 @@
     <meta name="theme-color" content="#0077cc">
 
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="{% trans %}site.name{% endtrans %}" />
+    <meta property="og:site_name" content="{{ 'site.name'|trans }}" />
     <meta property="og:url" content="{{ block('meta_canonical') }}" />
     <meta property="og:title" content="{{ block('title') }}" />
     <meta property="og:description" content="{{ block('meta_description') }}" />
@@ -49,7 +49,7 @@
             "@context": "http://schema.org",
             "@type": "Organization",
             "url": "{{ block('meta_canonical') }}",
-            "name": "{% trans %}site.name{% endtrans %}",
+            "name": "{{ 'site.name'|trans }}",
             "logo": "{{ (url('homepage')|trim('/')) ~ asset(localized_assets_folder ~ 'res/logo.png') }}",
             "description": "{{ block('meta_description') }}"
         }

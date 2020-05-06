@@ -62,9 +62,9 @@
             </trans-unit>
             <trans-unit id="footer.data-statement" resname="footer.data-statement">
                 <source>
-                    <![CDATA[Vous disposez d'un droit d'accès, de rectification, d’effacement et de portabilité de vos données ainsi que d’un droit d'opposition et d'un droit de limitation du traitement des données vous concernant. Vous pouvez exercer vos droits en nous contactant à l'adresse suivante : <a href="mailto:titouan@lisungi.org">titouan@lisungi.org</a>.]]></source>
+                    <![CDATA[Vous disposez d'un droit d'accès, de rectification, d’effacement et de portabilité de vos données ainsi que d’un droit d'opposition et d'un droit de limitation du traitement des données vous concernant. Vous pouvez exercer vos droits en nous contactant à l'adresse suivante : <a href="mailto:team@lisungi.org">team@lisungi.org</a>.]]></source>
                 <target>
-                    <![CDATA[Vous disposez d'un droit d'accès, de rectification, d’effacement et de portabilité de vos données ainsi que d’un droit d'opposition et d'un droit de limitation du traitement des données vous concernant. Vous pouvez exercer vos droits en nous contactant à l'adresse suivante : <a href="mailto:titouan@lisungi.org">titouan@lisungi.org</a>.]]></target>
+                    <![CDATA[Vous disposez d'un droit d'accès, de rectification, d’effacement et de portabilité de vos données ainsi que d’un droit d'opposition et d'un droit de limitation du traitement des données vous concernant. Vous pouvez exercer vos droits en nous contactant à l'adresse suivante : <a href="mailto:team@lisungi.org">team@lisungi.org</a>.]]></target>
             </trans-unit>
 
             <trans-unit id="social.share-intro" resname="social.share-intro">
@@ -502,15 +502,29 @@
                 <source>Votre âge (requis)</source>
                 <target>Votre âge (requis)</target>
             </trans-unit>
-            <trans-unit id="label.age" resname="label.age">
-                <source>Âge</source>
-                <target>Âge</target>
+            <trans-unit id="label.organization" resname="label.organization">
+                <source>Votre organisation (facultatif)</source>
+                <target>Votre organisation (facultatif)</target>
             </trans-unit>
-            <trans-unit id="label.postcode-required" resname="label.postcode-required">
-                <source>Votre code postal (français uniquement, requis)</source>
-                <target>Votre code postal (français uniquement, requis)</target>
+            <trans-unit id="help.organization" resname="help.organization">
+                <source>
+                    Organisation pour laquelle vous effectuez la demande (centre de santé, hôpital, ...).
+                    Laissez vide si vous effectuez la demande à titre individuel.
+                </source>
+                <target>
+                    Organisation pour laquelle vous effectuez la demande (centre de santé, hôpital, ...).
+                    Laissez vide si vous effectuez la demande à titre individuel.
+                </target>
             </trans-unit>
-            <trans-unit id="label.postcode" resname="label.postcode">
+            <trans-unit id="label.locality-required" resname="label.locality-required">
+                <source>Votre commune (requis)</source>
+                <target>Votre commune (requis)</target>
+            </trans-unit>
+            <trans-unit id="label.is-company" resname="label.is-company">
+                <source>J'effectue ce don en tant qu'entreprise ou organisation</source>
+                <target>J'effectue ce don en tant qu'entreprise ou organisation</target>
+            </trans-unit>
+            <trans-unit id="label.locality" resname="label.locality">
                 <source>Code postal</source>
                 <target>Code postal</target>
             </trans-unit>
@@ -538,132 +552,84 @@
                 <source>Utilisé pour vous mettre en relation.</source>
                 <target>Utilisé pour vous mettre en relation.</target>
             </trans-unit>
-            <trans-unit id="label.can-buy-groceries" resname="label.can-buy-groceries">
-                <source>Je peux acheter et livrer des courses pour les travailleurs de première ligne (soignants,
-                    services d’urgence, approvisionnement en énergie, nourriture, médicaments, matériel, ...)
-                </source>
-                <target>Je peux acheter et livrer des courses pour les travailleurs de première ligne (soignants,
-                    services d’urgence, approvisionnement en énergie, nourriture, médicaments, matériel, ...)
-                </target>
+            <trans-unit id="label.medical" resname="label.medical">
+                <source>Matériel médical</source>
+                <target>Matériel médical</target>
             </trans-unit>
-            <trans-unit id="help.can-buy-groceries" resname="help.can-buy-groceries">
-                <source>Vous pourrez être mis en relation avec des personnes ayant besoin d'être livrées en courses.
-                    Cette mise en relation n'est pas un engagement mais le début d'une discussion d'entraide.
-                </source>
-                <target>Vous pourrez être mis en relation avec des personnes ayant besoin d'être livrées en courses.
-                    Cette mise en relation n'est pas un engagement mais le début d'une discussion d'entraide.
-                </target>
+            <trans-unit id="label.other" resname="label.other">
+                <source>Autres ressources</source>
+                <target>Autres ressources</target>
             </trans-unit>
-            <trans-unit id="label.accept-vulnerable" resname="label.accept-vulnerable">
-                <source>Je peux acheter et livrer des courses pour les personnes faisant partie des populations à risque
-                    (de par l'âge, les antécédents médicaux ou les difficultés à se déplacer))
-                </source>
-                <target>Je peux acheter et livrer des courses pour les personnes faisant partie des populations à risque
-                    (de par l'âge, les antécédents médicaux ou les difficultés à se déplacer))
-                </target>
+            <trans-unit id="help.how-many-units" resname="help.how-many-units">
+                <source>Si oui, combien ? Laissez à 0 si vous n'en avez pas.</source>
+                <target>Si oui, combien ? Laissez à 0 si vous n'en avez pas.</target>
             </trans-unit>
-            <trans-unit id="help.accept-vulnerable" resname="help.accept-vulnerable">
-                <source>Vous pourrez être mis en relation avec des personnes ayant besoin d'être livrées en courses.
-                    Cette mise en relation n'est pas un engagement mais le début d'une discussion d'entraide.
-                </source>
-                <target>Vous pourrez être mis en relation avec des personnes ayant besoin d'être livrées en courses.
-                    Cette mise en relation n'est pas un engagement mais le début d'une discussion d'entraide.
-                </target>
+            <trans-unit id="help.how-many-ml" resname="help.how-many-ml">
+                <source>Si oui, quelle quantité (en ml) ? Laissez à 0 si vous n'en avez pas.</source>
+                <target>Si oui, quelle quantité (en ml) ? Laissez à 0 si vous n'en avez pas.</target>
             </trans-unit>
-            <trans-unit id="label.can-babysit" resname="label.can-babysit">
-                <source>Je peux garder un enfant à certaines occasions</source>
-                <target>Je peux garder un enfant à certaines occasions</target>
+            <trans-unit id="help.how-many-pairs" resname="help.how-many-pairs">
+                <source>Si oui, combien de paires ? Laissez à 0 si vous n'en avez pas.</source>
+                <target>Si oui, combien de paires ? Laissez à 0 si vous n'en avez pas.</target>
             </trans-unit>
-            <trans-unit id="help.can-babysit" resname="help.can-babysit">
-                <source>Vous pourrez être mis en relation avec des parents ayant besoin de garder leur enfant. Cette
-                    mise en relation n'est pas un engagement mais le début d'une discussion d'entraide.
-                </source>
-                <target>Vous pourrez être mis en relation avec des parents ayant besoin de garder leur enfant. Cette
-                    mise en relation n'est pas un engagement mais le début d'une discussion d'entraide.
-                </target>
+            <trans-unit id="help.how-many-doses" resname="help.how-many-doses">
+                <source>Si oui, combien de cachets ? Laissez à 0 si vous n'en avez pas.</source>
+                <target>Si oui, combien de cachets ? Laissez à 0 si vous n'en avez pas.</target>
             </trans-unit>
-            <trans-unit id="label.have-children" resname="label.have-children">
-                <source>Avez-vous ou avez-vous eu des enfants vous-même ?</source>
-                <target>Avez-vous ou avez-vous eu des enfants vous-même ?</target>
+            <trans-unit id="help.food" resname="help.food">
+                <source>Si oui, de quoi diposez-vous ? Laissez vide si vous n'en avez pas.</source>
+                <target>Si oui, de quoi diposez-vous ? Laissez vide si vous n'en avez pas.</target>
             </trans-unit>
-            <trans-unit id="help.have-children" resname="help.have-children">
-                <source>Il est plus rassurant pour des parents que vous soyez déjà parents vous-mêmes.</source>
-                <target>Il est plus rassurant pour des parents que vous soyez déjà parents vous-mêmes.</target>
+            <trans-unit id="help.other" resname="help.other">
+                <source>Si oui, de quoi diposez-vous ? Laissez vide si vous n'avez rien à ajouter.</source>
+                <target>Si oui, de quoi diposez-vous ? Laissez vide si vous n'avez rien à ajouter.</target>
             </trans-unit>
-            <trans-unit id="label.babysit-max-children" resname="label.babysit-max-children">
-                <source>Combien d'enfants au maximum pouvez-vous garder à la fois ?</source>
-                <target>Combien d'enfants au maximum pouvez-vous garder à la fois ?</target>
+            <trans-unit id="label.helper-masks" resname="label.helper-masks">
+                <source>Je peux donner des masques</source>
+                <target>Je peux donner des masques</target>
             </trans-unit>
-            <trans-unit id="label.only-one" resname="label.only-one">
-                <source>Un seul</source>
-                <target>Un seul</target>
+            <trans-unit id="label.helper-glasses" resname="label.helper-glasses">
+                <source>Je peux donner des lunettes</source>
+                <target>Je peux donner des lunettes</target>
             </trans-unit>
-            <trans-unit id="label.up-to-two" resname="label.up-to-two">
-                <source>Jusqu'à 2</source>
-                <target>Jusqu'à 2</target>
+            <trans-unit id="label.helper-blouses" resname="label.helper-blouses">
+                <source>Je peux donner des blouses / surblouses</source>
+                <target>Je peux donner des blouses / surblouses</target>
             </trans-unit>
-            <trans-unit id="label.up-to-three" resname="label.up-to-three">
-                <source>Jusqu'à 3</source>
-                <target>Jusqu'à 3</target>
+            <trans-unit id="label.helper-gel" resname="label.helper-gel">
+                <source>Je peux donner du gel hydroalcoolique</source>
+                <target>Je peux donner du gel hydroalcoolique</target>
             </trans-unit>
-            <trans-unit id="label.up-to-four" resname="label.up-to-four">
-                <source>Jusqu'à 4</source>
-                <target>Jusqu'à 4</target>
+            <trans-unit id="label.helper-gloves" resname="label.helper-gloves">
+                <source>Je peux donner des gants</source>
+                <target>Je peux donner des gants</target>
             </trans-unit>
-            <trans-unit id="label.babysit-ages" resname="label.babysit-ages">
-                <source>Quelle(s) tranche(s) d'âge d'enfants vous sentez-vous à l'aise de garder ?</source>
-                <target>Quelle(s) tranche(s) d'âge d'enfants vous sentez-vous à l'aise de garder ?</target>
+            <trans-unit id="label.helper-disinfectant" resname="label.helper-disinfectant">
+                <source>Je peux donner du désinfectant</source>
+                <target>Je peux donner du désinfectant</target>
             </trans-unit>
-            <trans-unit id="label.between-0-1" resname="label.between-0-1">
-                <source>Entre 0 et 1 an</source>
-                <target>Entre 0 et 1 an</target>
+            <trans-unit id="label.helper-paracetamol" resname="label.helper-paracetamol">
+                <source>Je peux donner du paracétamol</source>
+                <target>Je peux donner du paracétamol</target>
             </trans-unit>
-            <trans-unit id="label.between-1-2" resname="label.between-1-2">
-                <source>Entre 1 et 2 ans</source>
-                <target>Entre 1 et 2 ans</target>
+            <trans-unit id="label.helper-food" resname="label.helper-food">
+                <source>Je peux donner de la nourriture</source>
+                <target>Je peux donner de la nourriture</target>
             </trans-unit>
-            <trans-unit id="label.between-3-5" resname="label.between-3-5">
-                <source>Entre 3 et 5 ans</source>
-                <target>Entre 3 et 5 ans</target>
+            <trans-unit id="label.helper-soap" resname="label.helper-soap">
+                <source>Je peux donner du savon</source>
+                <target>Je peux donner du savon</target>
             </trans-unit>
-            <trans-unit id="label.between-6-9" resname="label.between-6-9">
-                <source>Entre 6 et 9 ans</source>
-                <target>Entre 6 et 9 ans</target>
-            </trans-unit>
-            <trans-unit id="label.between-10-12" resname="label.between-10-12">
-                <source>Entre 10 et 12 ans</source>
-                <target>Entre 10 et 12 ans</target>
-            </trans-unit>
-            <trans-unit id="label.13-and-over" resname="label.13-and-over">
-                <source>13 ans et plus</source>
-                <target>13 ans et plus</target>
-            </trans-unit>
-            <trans-unit id="label.age-0-1" resname="label.age-0-1">
-                <source>0 à 1 an</source>
-                <target>0 à 1 an</target>
-            </trans-unit>
-            <trans-unit id="label.age-1-2" resname="label.age-1-2">
-                <source>1 à 2 ans</source>
-                <target>1 à 2 ans</target>
-            </trans-unit>
-            <trans-unit id="label.age-3-5" resname="label.age-3-5">
-                <source>3 à 5 ans</source>
-                <target>3 à 5 ans</target>
-            </trans-unit>
-            <trans-unit id="label.age-6-9" resname="label.age-6-9">
-                <source>6 à 9 ans</source>
-                <target>6 à 9 ans</target>
-            </trans-unit>
-            <trans-unit id="label.age-10-12" resname="label.age-10-12">
-                <source>10 à 12 ans</source>
-                <target>10 à 12 ans</target>
+            <trans-unit id="label.helper-other" resname="label.helper-other">
+                <source>Je peux donner d'autres choses</source>
+                <target>Je peux donner d'autres choses</target>
             </trans-unit>
             <trans-unit id="label.confirm" resname="label.confirm">
                 <source>J'ai lu et j'accepte la Politique de confidentialité et les Conditions d'utilisation
-                    d'lisungi.org
+                    de lisungi.org
                 </source>
                 <target>J'ai lu et j'accepte la Politique de confidentialité et les Conditions d'utilisation
-                    d'lisungi.org
+                    de lisungi.org
                 </target>
             </trans-unit>
             <trans-unit id="help.confirm" resname="help.confirm">
@@ -738,49 +704,69 @@
                     en première ligne contre l’épidémie
                 </target>
             </trans-unit>
-            <trans-unit id="label.work-health" resname="label.work-health">
-                <source>Le médical ou le paramédical</source>
-                <target>Le médical ou le paramédical</target>
-            </trans-unit>
-            <trans-unit id="label.work-emergency" resname="label.work-emergency">
-                <source>Un service d’urgence</source>
-                <target>Un service d’urgence</target>
-            </trans-unit>
-            <trans-unit id="label.work-care" resname="label.work-care">
-                <source>L’aide aux personnes à domicile ou en centre</source>
-                <target>L’aide aux personnes à domicile ou en centre</target>
-            </trans-unit>
-            <trans-unit id="label.work-food" resname="label.work-food">
-                <source>La production ou l’approvisionnement agroalimentaire</source>
-                <target>La production ou l’approvisionnement agroalimentaire</target>
-            </trans-unit>
-            <trans-unit id="label.work-drugs" resname="label.work-drugs">
-                <source>La production ou l’approvisionnement de médicaments</source>
-                <target>La production ou l’approvisionnement de médicaments</target>
-            </trans-unit>
-            <trans-unit id="label.work-energy" resname="label.work-energy">
-                <source>La production ou l’approvisionnement en énergie</source>
-                <target>La production ou l’approvisionnement en énergie</target>
-            </trans-unit>
-            <trans-unit id="label.work-transport" resname="label.work-transport">
-                <source>Le service minimum de transports en commun</source>
-                <target>Le service minimum de transports en commun</target>
-            </trans-unit>
-            <trans-unit id="label.work-other" resname="label.work-other">
-                <source>Une autre fonction nécessaire au maintien des secteurs vitaux de la Nation</source>
-                <target>Une autre fonction nécessaire au maintien des secteurs vitaux de la Nation</target>
-            </trans-unit>
             <trans-unit id="label.needs" resname="label.needs">
                 <source>Quels sont vos besoins ?</source>
                 <target>Quels sont vos besoins ?</target>
             </trans-unit>
-            <trans-unit id="label.babysitting" resname="label.babysitting">
-                <source>Garder un enfant</source>
-                <target>Garder un enfant</target>
+            <trans-unit id="help.need-how-many-units" resname="help.need-how-many-units">
+                <source>De combien en avez-vous besoin ?</source>
+                <target>De combien en avez-vous besoin ?</target>
             </trans-unit>
-            <trans-unit id="label.shopping-and-delivery" resname="label.shopping-and-delivery">
-                <source>Faire les courses et les livrer</source>
-                <target>Faire les courses et les livrer</target>
+            <trans-unit id="help.need-how-many-ml" resname="help.need-how-many-ml">
+                <source>De quelle quantité (en ml) avez-vous besoin ?</source>
+                <target>De quelle quantité (en ml) avez-vous besoin ?</target>
+            </trans-unit>
+            <trans-unit id="help.need-how-many-pairs" resname="help.need-how-many-pairs">
+                <source>De combien de paires avez-vous besoin ?</source>
+                <target>De combien de paires avez-vous besoin ?</target>
+            </trans-unit>
+            <trans-unit id="help.need-how-many-doses" resname="help.need-how-many-doses">
+                <source>De combien de cachets avez-vous besoin ?</source>
+                <target>De combien de cachets avez-vous besoin ?</target>
+            </trans-unit>
+            <trans-unit id="help.need-other" resname="help.need-other">
+                <source>De quoi d'autre avez-vous besoin ?</source>
+                <target>De quoi d'autre avez-vous besoin ?</target>
+            </trans-unit>
+            <trans-unit id="label.need-masks" resname="label.need-masks">
+                <source>J'ai besoin de masques</source>
+                <target>J'ai besoin de masques</target>
+            </trans-unit>
+            <trans-unit id="label.need-glasses" resname="label.need-glasses">
+                <source>J'ai besoin de lunettes</source>
+                <target>J'ai besoin de lunettes</target>
+            </trans-unit>
+            <trans-unit id="label.need-blouses" resname="label.need-blouses">
+                <source>J'ai besoin de blouses/surblouses</source>
+                <target>J'ai besoin de blouses/surblouses</target>
+            </trans-unit>
+            <trans-unit id="label.need-gel" resname="label.need-gel">
+                <source>J'ai besoin de gel hydroalcoolique</source>
+                <target>J'ai besoin de gel hydroalcoolique</target>
+            </trans-unit>
+            <trans-unit id="label.need-gloves" resname="label.need-gloves">
+                <source>J'ai besoin de gants</source>
+                <target>J'ai besoin de gants</target>
+            </trans-unit>
+            <trans-unit id="label.need-disinfectant" resname="label.need-disinfectant">
+                <source>J'ai besoin de désinfectant</source>
+                <target>J'ai besoin de désinfectant</target>
+            </trans-unit>
+            <trans-unit id="label.need-paracetamol" resname="label.need-paracetamol">
+                <source>J'ai besoin de paracétamol</source>
+                <target>J'ai besoin de paracétamol</target>
+            </trans-unit>
+            <trans-unit id="label.need-soap" resname="label.need-soap">
+                <source>J'ai besoin de savon</source>
+                <target>J'ai besoin de savon</target>
+            </trans-unit>
+            <trans-unit id="label.need-food" resname="label.need-food">
+                <source>J'ai besoin de nourriture</source>
+                <target>J'ai besoin de nourriture</target>
+            </trans-unit>
+            <trans-unit id="label.need-other" resname="label.need-other">
+                <source>J'ai besoin d'autre chose</source>
+                <target>J'ai besoin d'autre chose</target>
             </trans-unit>
             <trans-unit id="label.send-request" resname="label.send-request">
                 <source>Envoyer ma demande</source>

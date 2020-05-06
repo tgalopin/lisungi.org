@@ -5,11 +5,11 @@
 
 {% block main %}
     <div class="p-3">
-        {% trans %}admin.requester{% endtrans %}
+        {{ 'admin.requester'|trans }}
         <br />
         <strong>{{ requests[0].firstName }} {{ requests[0].lastName }}</strong> ({{ requests[0].zipCode }})
         <br />
-        {% trans %}admin.job-type{% endtrans %} {{ requests[0].jobType }}
+        {{ 'admin.job-type'|trans }} {{ requests[0].jobType }}
     </div>
 
     <div class="p-4">
@@ -20,10 +20,10 @@
         </p>
 
         <a href="?token={{ csrf_token('admin_confirm') }}" class="btn btn-primary mr-3">
-            {% trans %}label.yes-close{% endtrans %}
+            {{ 'label.yes-close'|trans }}
         </a>
         <a href="{{ path('admin_match', {'ownerUuid': ownerUuid}) }}" class="btn btn-secondary">
-            {% trans %}label.no-cancel{% endtrans %}
+            {{ 'label.no-cancel'|trans }}
         </a>
     </div>
 {% endblock %}

@@ -7,16 +7,16 @@
                 <div class="row align-items-center">
                     <div class="col-12 col-xl-3 home-header-menu d-none d-xl-block">
                         <a href="mailto:{{ team_email }}">
-                            {% trans %}header.contact_us{% endtrans %}
+                            {{ 'header.contact_us'|trans }}
                         </a>
                     </div>
                     <div class="col-12 col-xl-6 text-center">
                         <h1 class="sr-only">
-                            {% trans %}site.name{% endtrans %}
+                            {{ 'site.name'|trans }}
                         </h1>
 
                         <a href="{{ path('homepage') }}">
-                            <img src="{{ asset(localized_assets_folder ~ 'res/logo.png') }}" class="home-header-logo" alt="{% trans %}site.name{% endtrans %}" />
+                            <img src="{{ asset(localized_assets_folder ~ 'res/logo.png') }}" class="home-header-logo" alt="{{ 'site.name'|trans }}" />
                         </a>
                     </div>
                     <div class="col-12 col-xl-3 text-center text-xl-right home-header-socials">
@@ -31,33 +31,33 @@
         <div class="home-row">
             <div class="home-row-half home-isolated text-white">
                 <div class="m-4 p-3 m-lg-5 p-lg-5">
-                    <a href="{{ path('process_request_vulnerable') }}" class="home-row-half-button text-white">
+                    <a href="{{ path('process_request') }}" class="home-row-half-button text-white">
                         <div class="home-row-half-button-icon d-none d-lg-block">
                             {{ include('_icons/arrow.html.twig') }}
                         </div>
                         <div class="home-row-half-button-label">
-                            {% trans %}home.work-title{% endtrans %}
+                            {{ 'home.work-title'|trans }}
                         </div>
                     </a>
 
                     <div class="home-row-half-details mt-3 mb-4">
                         <p>
-                            {% trans %}home.work-intro{% endtrans %}
+                            {{ 'home.work-intro'|trans }}
                         </p>
-                        {% trans %}home.work-request{% endtrans %}
+                        {{ 'home.work-request'|trans }}
                     </div>
 
                     <div class="row no-gutters text-center">
                         <div class="col-12 col-xl-auto">
-                            <a href="{{ path('process_request_vulnerable') }}"
+                            <a href="{{ path('process_request') }}"
                                class="btn btn-teal btn-lg border-white border mr-xl-3" style="background: transparent;">
-                                {% trans %}label.request-help{% endtrans %}
+                                {{ 'label.request-help'|trans }}
                             </a>
                         </div>
                         <div class="col-12 col-xl-auto">
                             <a href="{{ path('content_how') }}"
                                class="btn btn-link btn-lg text-white mt-3 mt-xl-0">
-                                {% trans %}label.how-work{% endtrans %}
+                                {{ 'label.how-work'|trans }}
                             </a>
                         </div>
                     </div>
@@ -70,28 +70,28 @@
                             {{ include('_icons/arrow.html.twig') }}
                         </div>
                         <div class="home-row-half-button-label">
-                            {% trans %}home.title{% endtrans %}
+                            {{ 'home.title'|trans }}
                         </div>
                     </a>
 
                     <div class="home-row-half-details mt-3 mb-4">
                         <p>
-                            {% trans %}home.young-healthy{% endtrans %}
+                            {{ 'home.young-healthy'|trans }}
                         </p>
-                        {% trans %}home.intro{% endtrans %}
+                        {{ 'home.intro'|trans }}
                     </div>
 
                     <div class="row no-gutters text-center">
                         <div class="col-12 col-xl-auto">
                             <a href="{{ path('process_helper') }}"
                                class="btn btn-info btn-lg border-white border mr-xl-3">
-                                {% trans %}label.offer-help{% endtrans %}
+                                {{ 'label.offer-help'|trans }}
                             </a>
                         </div>
                         <div class="col-12 col-xl-auto">
                             <a href="{{ path('content_how') }}"
                                class="btn btn-link btn-lg text-white mt-3 mt-xl-0">
-                                {% trans %}label.how-work{% endtrans %}
+                                {{ 'label.how-work'|trans }}
                             </a>
                         </div>
                     </div>
@@ -102,33 +102,35 @@
         <div class="home-ecosystem p-4 p-lg-5" id="invite">
             <div class="home-share text-center mb-5">
                 <div class="text-muted mb-2">
-                    {% trans %}social.share-intro{% endtrans %}
+                    {{ 'social.share-intro'|trans }}
                 </div>
 
-                <a href="https://www.facebook.com/sharer/sharer.php?u={{ url('homepage')|url_encode }}" title="{% trans %}social.share-facebook{% endtrans %}" target="_blank" rel="noreferrer noopener">
+                <a href="https://www.facebook.com/sharer/sharer.php?u={{ url('homepage')|url_encode }}" title="{{ 'social.share-facebook'|trans }}" target="_blank" rel="noreferrer noopener">
                     {{ include('_icons/facebook.html.twig') }}
                 </a>
-                <a href="https://twitter.com/intent/tweet?text={{ url('homepage') }}" title="{% trans %}social.share-twitter{% endtrans %}" target="_blank" rel="noreferrer noopener">
+                <a href="https://twitter.com/intent/tweet?text={{ url('homepage') }}" title="{{ 'social.share-twitter'|trans }}" target="_blank" rel="noreferrer noopener">
                     {{ include('_icons/twitter.html.twig') }}
                 </a>
-                <a href="https://telegram.me/share/url?url={{ url('homepage') }}" title="{% trans %}social.share-facebook{% endtrans %}" target="_blank" rel="noreferrer noopener">
+                <a href="https://telegram.me/share/url?url={{ url('homepage') }}" title="{{ 'social.share-facebook'|trans }}" target="_blank" rel="noreferrer noopener">
                     {{ include('_icons/telegram.html.twig') }}
                 </a>
-                <a href="https://wa.me/?text={{ url('homepage') }}" title="{% trans %}social.share-facebook{% endtrans %}" target="_blank" rel="noreferrer noopener">
+                <a href="https://wa.me/?text={{ url('homepage') }}" title="{{ 'social.share-facebook'|trans }}" target="_blank" rel="noreferrer noopener">
                     {{ include('_icons/whatsapp.html.twig') }}
                 </a>
             </div>
 
             <div class="home-ecosystem-feedbacks mb-5">
-                <h5 class="font-weight-normal mb-5 p-4">
-                    {% trans with {'count' : countTotalHelpers|number_format(0, ',', ' ') } %}home.number-volunteers{% endtrans %}
-                    <br />
-                    {% trans with {'percentage' : (((countTotalOwners - countUnmatchedOwners) / countTotalOwners) * 100)|number_format(2) } %}home.percentage-resolved{% endtrans %}
-                </h5>
+                {% include '_include/' ~ app.request.locale ~ '/homepage_footer.html.twig' %}
 
                 {#
+                    <h5 class="font-weight-normal mb-5 p-4">
+                        {% trans with {'count' : countTotalHelpers|number_format(0, ',', ' ') } %}home.number-volunteers{% endtrans %}
+                        <br />
+                        {% trans with {'percentage' : (((countTotalOwners - countUnmatchedOwners) / countTotalOwners) * 100)|number_format(2) } %}home.percentage-resolved{% endtrans %}
+                    </h5>
+
                     <h5>
-                        {% trans %}label.testimonials{% endtrans %}
+                        {{ 'label.testimonials'|trans }}
                     </h5>
 
                     <div class="row">
@@ -137,10 +139,10 @@
                                 <blockquote>
                                     <div>
                                         <p>
-                                            {% trans %}home.testimonial-one{% endtrans %}
+                                            {{ 'home.testimonial-one'|trans }}
                                         </p>
 
-                                        <cite>{% trans %}home.testimonial-one-from{% endtrans %}</cite>
+                                        <cite>{{ 'home.testimonial-one-from'|trans }}</cite>
                                     </div>
                                 </blockquote>
                             </div>
@@ -150,10 +152,10 @@
                                 <blockquote>
                                     <div>
                                         <p>
-                                            {% trans %}home.testimonial-two{% endtrans %}
+                                            {{ 'home.testimonial-two'|trans }}
                                         </p>
 
-                                        <cite>{% trans %}home.testimonial-two-from{% endtrans %}</cite>
+                                        <cite>{{ 'home.testimonial-two-from'|trans }}</cite>
                                     </div>
                                 </blockquote>
                             </div>
@@ -161,7 +163,6 @@
                     </div>
                 </div>
 
-                {% include '_include/' ~ app.request.locale ~ '/homepage_footer.html.twig' %}
                 #}
             </div>
         </div>

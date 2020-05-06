@@ -3,7 +3,7 @@
 </p>
 
 <p>
-    {% trans %}email.good-news{% endtrans %}
+    {{ 'email.good-news'|trans }}
 </p>
 
 <p>
@@ -16,11 +16,11 @@
 </p>
 
 <p>
-    {% trans %}email.up-to-you{% endtrans %}
+    {{ 'email.up-to-you'|trans }}
 </p>
 
 <p>
-    {% trans %}email.three-copied{% endtrans %}
+    {{ 'email.three-copied'|trans }}
 </p>
 
 {{ include('emails/_include/guidelines_global.html.twig', { type: 'groceries' }) }}

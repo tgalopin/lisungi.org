@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,600&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
 
-    <title>{% trans %}error.occurred{% endtrans %}</title>
+    <title>{{ 'error.occurred'|trans }}</title>
 
     <style>
         html, body, .wrapper {
@@ -51,16 +51,16 @@
 <div class="wrapper">
     <div class="message">
         <h1>
-            {% trans %}error.occurred{% endtrans %}
+            {{ 'error.occurred'|trans }}
         </h1>
 
         <p>
-            {% trans %}error.occurred-alerted{% endtrans %}
+            {{ 'error.occurred-alerted'|trans }}
         </p>
 
         <p>
             <a href="/" class="btn btn-label-primary">
-                {% trans %}label.home{% endtrans %}
+                {{ 'label.home'|trans }}
             </a>
         </p>
     </div>

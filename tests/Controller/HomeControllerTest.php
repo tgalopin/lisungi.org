@@ -12,6 +12,6 @@ class HomeControllerTest extends WebTestCase
         $client->request('GET', '/');
 
         $this->assertResponseIsSuccessful();
-        $this->assertSelectorTextContains('h1', 'En première ligne');
+        $this->assertSelectorTextContains('h1', 'Lisungi');
     }
 }

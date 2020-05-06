@@ -5,9 +5,7 @@ namespace App\Controller;
 use App\Entity\Helper;
 use App\Form\CompositeHelpRequestType;
 use App\Form\HelperType;
-use App\Form\VulnerableHelpRequestType;
 use App\Model\CompositeHelpRequest;
-use App\Model\VulnerableHelpRequest;
 use App\Repository\HelperRepository;
 use App\Repository\HelpRequestRepository;
 use Doctrine\ORM\EntityManagerInterface;
@@ -158,53 +156,6 @@ class ProcessController extends AbstractController
         }
 
         return $this->render('process/request.html.twig', [
-            'form' => $form->createView(),
-        ]);
-    }
-
-    /**
-     * @Route({
-     *     "fr_CD": "/j-ai-besoin-d-aide-risque",
-     *     "en_NZ": "/at-risk-need-help"
-     * }, name="process_request_vulnerable")
-     */
-    public function requestVulnerable(MailerInterface $mailer, EntityManagerInterface $manager, HelpRequestRepository $repository, Request $request, TranslatorInterface $translator, string $sender)
-    {
-        $helpRequest = new VulnerableHelpRequest();
-
-        $form = $this->createForm(VulnerableHelpRequestType::class, $helpRequest);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $repository->clearOldOwnerRequests($helpRequest->email);
-
-            $ownerId = Uuid::uuid4();
-
-            $manager->persist($helpRequest->createStandaloneRequest($ownerId));
-            $manager->flush();
-
-            $to = [$helpRequest->email];
-            if ($helpRequest->ccEmail) {
-                $to[] = $helpRequest->ccEmail;
-            }
-
-            $email = (new TemplatedEmail())
-                ->from($sender)
-                ->to(...$to)
-                ->subject($translator->trans('email.request-subject'))
-                ->htmlTemplate('emails/request_vulnerable.html.twig')
-                ->context(['request' => $helpRequest, 'ownerUuid' => $ownerId])
-            ;
-
-            $mailer->send($email);
-
-            return $this->redirectToRoute('process_requester_view', [
-                'ownerUuid' => $ownerId->toString(),
-                'success' => '1',
-            ]);
-        }
-
-        return $this->render('process/request_vulnerable.html.twig', [
             'form' => $form->createView(),
         ]);
     }

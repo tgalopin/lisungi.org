@@ -5,11 +5,11 @@
 
 {% block main %}
     <div class="p-3">
-        {% trans %}admin.requester{% endtrans %}
+        {{ 'admin.requester'|trans }}
         <br />
         <strong>{{ requests[0].firstName }} {{ requests[0].lastName }}</strong> ({{ requests[0].zipCode }})
         <br />
-        {% trans %}admin.job-type{% endtrans %} {{ requests[0].jobType }}
+        {{ 'admin.job-type'|trans }} {{ requests[0].jobType }}
     </div>
 
     <div class="p-4">
@@ -22,22 +22,22 @@
         {% if remove == 'helper' %}
             <p>
                 <strong>
-                    {% trans %}admin.delete-volunteer-profile{% endtrans %}
+                    {{ 'admin.delete-volunteer-profile'|trans }}
                 </strong>
             </p>
         {% elseif remove == 'request' %}
             <p>
                 <strong>
-                    {% trans %}admin.delete-request{% endtrans %}
+                    {{ 'admin.delete-request'|trans }}
                 </strong>
             </p>
         {% endif %}
 
         <a href="?token={{ csrf_token('admin_cancel') }}&remove={{ remove }}" class="btn btn-primary mr-3">
-            {% trans %}label.yes-cancel{% endtrans %}
+            {{ 'label.yes-cancel'|trans }}
         </a>
         <a href="{{ path('admin_match_history') }}" class="btn btn-secondary">
-            {% trans %}label.no-cancel{% endtrans %}
+            {{ 'label.no-cancel'|trans }}
         </a>
     </div>
 {% endblock %}

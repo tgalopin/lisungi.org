@@ -15,6 +15,17 @@ use Symfony\Component\Validator\Constraints as Assert;
  */
 class HelpRequest
 {
+    public const TYPE_MASKS = 'masks';
+    public const TYPE_GLASSES = 'glasses';
+    public const TYPE_BLOUSES = 'blouses';
+    public const TYPE_GEL = 'gel';
+    public const TYPE_GLOVES = 'gloves';
+    public const TYPE_DISINFECTANT = 'disinfectant';
+    public const TYPE_PARACETAMOL = 'paracetamol';
+    public const TYPE_SOAP = 'soap';
+    public const TYPE_FOOD = 'food';
+    public const TYPE_OTHER = 'other';
+
     /**
      * @ORM\Id
      * @ORM\GeneratedValue
@@ -70,56 +81,19 @@ class HelpRequest
     public ?string $organization = null;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(length=50)
      */
-    public ?int $masks = 0;
+    public ?string $type;
 
     /**
      * @ORM\Column(type="integer")
      */
-    public ?int $glasses = 0;
+    public ?int $quantity = 0;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(length=250)
      */
-    public ?int $blouses = 0;
-
-    /**
-     * @ORM\Column(type="integer")
-     */
-    public ?int $gel = 0;
-
-    /**
-     * @ORM\Column(type="integer")
-     */
-    public ?int $gloves = 0;
-
-    /**
-     * @ORM\Column(type="integer")
-     */
-    public ?int $disinfectant = 0;
-
-    /**
-     * @ORM\Column(type="integer")
-     */
-    public ?int $paracetamol = 0;
-
-    /**
-     * @ORM\Column(type="integer")
-     */
-    public ?int $soap = 0;
-
-    /**
-     * @ORM\Column(type="boolean")
-     */
-    public ?bool $food = false;
-
-    /**
-     * @ORM\Column(length=250, nullable=true)
-     *
-     * @Assert\Length(max=250)
-     */
-    public ?string $other = null;
+    public ?string $details;
 
     /**
      * @ORM\Column(type="boolean")
@@ -140,6 +114,22 @@ class HelpRequest
     {
         $this->uuid = Uuid::uuid4();
         $this->createdAt = new \DateTime();
+    }
+
+    public static function getTypes()
+    {
+        return [
+            self::TYPE_MASKS,
+            self::TYPE_GLASSES,
+            self::TYPE_BLOUSES,
+            self::TYPE_GEL,
+            self::TYPE_GLOVES,
+            self::TYPE_DISINFECTANT,
+            self::TYPE_PARACETAMOL,
+            self::TYPE_SOAP,
+            self::TYPE_FOOD,
+            self::TYPE_OTHER,
+        ];
     }
 
     public function getId(): ?int

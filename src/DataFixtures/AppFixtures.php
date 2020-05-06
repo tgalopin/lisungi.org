@@ -22,8 +22,8 @@ class AppFixtures extends Fixture
     public function load(ObjectManager $manager)
     {
         $this->loadAdmin($manager);
-        $this->loadHelpers($manager);
-        $this->loadHelpRequests($manager);
+        // $this->loadHelpers($manager);
+        // $this->loadHelpRequests($manager);
 
         $manager->flush();
     }

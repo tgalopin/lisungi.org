@@ -8,22 +8,22 @@
     <div class="process-box">
         <div class="bg-light p-3 p-lg-4">
             <h3 class="text-center font-weight-bold mb-4">
-                {% trans %}request.my-request{% endtrans %}
+                {{ 'request.my-request'|trans }}
             </h3>
 
             <div class="process-details">
                 <p>
-                    {% trans %}request.remove-confirm{% endtrans %}
+                    {{ 'request.remove-confirm'|trans }}
                 </p>
 
                 <div class="text-center mt-4">
                     <a href="{{ path('process_requester_delete_do', {'ownerUuid': ownerUuid, 'token': csrf_token('requester_delete')}) }}"
                        class="btn btn-danger">
-                        {% trans %}label.yes-remove{% endtrans %}
+                        {{ 'label.yes-remove'|trans }}
                     </a>
                     <a href="{{ path('process_requester_view', {'ownerUuid': ownerUuid}) }}"
                        class="btn btn-link">
-                        {% trans %}label.no-return{% endtrans %}
+                        {{ 'label.no-return'|trans }}
                     </a>
                 </div>
             </div>
