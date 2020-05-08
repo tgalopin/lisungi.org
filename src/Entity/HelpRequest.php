@@ -20,7 +20,6 @@ class HelpRequest
     public const TYPE_BLOUSES = 'blouses';
     public const TYPE_GEL = 'gel';
     public const TYPE_GLOVES = 'gloves';
-    public const TYPE_DISINFECTANT = 'disinfectant';
     public const TYPE_PARACETAMOL = 'paracetamol';
     public const TYPE_SOAP = 'soap';
     public const TYPE_FOOD = 'food';
@@ -67,6 +66,13 @@ class HelpRequest
      * @Assert\Length(max=200)
      */
     public ?string $email;
+
+    /**
+     * @ORM\Column(length=50, nullable=true)
+     *
+     * @Assert\Length(max=50)
+     */
+    public ?string $phone = null;
 
     /**
      * @ORM\Column(length=50)
@@ -124,7 +130,6 @@ class HelpRequest
             self::TYPE_BLOUSES,
             self::TYPE_GEL,
             self::TYPE_GLOVES,
-            self::TYPE_DISINFECTANT,
             self::TYPE_PARACETAMOL,
             self::TYPE_SOAP,
             self::TYPE_FOOD,

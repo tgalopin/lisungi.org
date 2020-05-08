@@ -22,11 +22,15 @@ class CompositeHelpRequestType extends AbstractType
             ->add('firstName', TextType::class, ['required' => true])
             ->add('lastName', TextType::class, ['required' => true])
             ->add('email', EmailType::class, ['required' => true])
-            ->add('locality', ChoiceType::class, ['required' => true, 'choices' => Locality::LOCALITIES])
+            ->add('phone', TextType::class, ['required' => false])
+            ->add('locality', ChoiceType::class, ['required' => true, 'choices' => Locality::LOCALITIES['fr_CD']])
             ->add('organization', TextType::class, ['required' => false])
             ->add('details', CollectionType::class, [
                 'entry_type' => CompositeHelpRequestDetailType::class,
             ])
+            ->add('confirm_health', CheckboxType::class, ['required' => true, 'mapped' => false, 'constraints' => [
+                new NotBlank(),
+            ]])
             ->add('confirm', CheckboxType::class, ['required' => true, 'mapped' => false, 'constraints' => [
                 new NotBlank(),
             ]])

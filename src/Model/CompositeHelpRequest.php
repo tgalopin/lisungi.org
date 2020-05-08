@@ -15,9 +15,23 @@ class CompositeHelpRequest
      */
     public ?string $firstName = '';
 
+    /**
+     * @Assert\NotBlank(message="name-last.required")
+     * @Assert\Length(max=100)
+     */
     public ?string $lastName = '';
 
+    /**
+     * @Assert\NotBlank(message="email.required")
+     * @Assert\Email()
+     * @Assert\Length(max=200)
+     */
     public ?string $email = '';
+
+    /**
+     * @Assert\Length(max=50)
+     */
+    public ?string $phone = null;
 
     /**
      * @ORM\Column(length=50)

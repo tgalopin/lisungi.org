@@ -18,6 +18,14 @@
                     {{ 'request.intro-two'|trans }}
                 </p>
 
+                <p>
+                    {{ 'request.intro-three'|trans }}
+                </p>
+
+                <p>
+                    {{ 'request.intro-four'|trans }}
+                </p>
+
                 <a href="{{ path('content_how') }}">
                     {{ 'label.how-platform-works'|trans }}
                 </a>
@@ -46,7 +54,14 @@
                     </div>
                 </div>
 
-                {{ form_row(form.email, {'label': 'label.email-required', 'help': 'help.email'}) }}
+                <div class="row">
+                    <div class="col-12 col-lg-6 mb-3">
+                        {{ form_row(form.email, {'label': 'label.email-required', 'help': 'help.email'|trans}) }}
+                    </div>
+                    <div class="col-12 col-lg-6 mb-3">
+                        {{ form_row(form.phone, {'label': 'label.phone', 'help': 'help.email'|trans}) }}
+                    </div>
+                </div>
             </div>
 
             <div class="process-block bg-white p-3 p-lg-4 mb-4">
@@ -68,7 +83,7 @@
                                 {% if type in ['masks', 'glasses', 'blouses'] %}
                                     {{ form_row(fields.quantity, {'label': 'help.need-how-many-units'|trans}) }}
                                     <div class="d-none">{{ form_row(fields.details) }}</div>
-                                {% elseif type in ['gel', 'soap', 'disinfectant'] %}
+                                {% elseif type in ['gel', 'soap'] %}
                                     {{ form_row(fields.quantity, {'label': 'help.need-how-many-ml'|trans}) }}
                                     <div class="d-none">{{ form_row(fields.details) }}</div>
                                 {% elseif type in ['gloves'] %}
@@ -90,6 +105,13 @@
                         </div>
                     </div>
                 {% endfor %}
+            </div>
+
+            <div class="process-block bg-white p-3 p-lg-4 mb-4">
+                {{ form_row(form.confirm_health, {
+                    'label': 'label.confirm_health',
+                    'label_attr': { 'class': 'checkbox-custom' },
+                }) }}
             </div>
 
             <div class="process-block bg-white p-3 p-lg-4 mb-5">

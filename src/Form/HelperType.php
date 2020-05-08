@@ -22,18 +22,21 @@ class HelperType extends AbstractType
             ->add('firstName', TextType::class, ['required' => true])
             ->add('lastName', TextType::class, ['required' => true])
             ->add('email', EmailType::class, ['required' => true])
-            ->add('locality', ChoiceType::class, ['required' => true, 'choices' => Locality::LOCALITIES])
-            ->add('isCompany', CheckboxType::class, ['required' => false])
+            ->add('locality', ChoiceType::class, ['required' => true, 'choices' => Locality::LOCALITIES['fr_CD']])
+            ->add('company', TextType::class, ['required' => false])
+            ->add('phone', TextType::class, ['required' => false])
             ->add('masks', NumberType::class, ['required' => false])
             ->add('glasses', NumberType::class, ['required' => false])
             ->add('blouses', NumberType::class, ['required' => false])
             ->add('gel', NumberType::class, ['required' => false])
             ->add('gloves', NumberType::class, ['required' => false])
-            ->add('disinfectant', NumberType::class, ['required' => false])
             ->add('paracetamol', NumberType::class, ['required' => false])
             ->add('soap', NumberType::class, ['required' => false])
             ->add('food', TextType::class, ['required' => false])
             ->add('other', TextType::class, ['required' => false])
+            ->add('confirm_legal', CheckboxType::class, ['required' => true, 'mapped' => false, 'constraints' => [
+                new NotBlank(),
+            ]])
             ->add('confirm', CheckboxType::class, ['required' => true, 'mapped' => false, 'constraints' => [
                 new NotBlank(),
             ]])

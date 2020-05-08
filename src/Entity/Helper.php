@@ -60,9 +60,18 @@ class Helper
     public ?string $locality = '';
 
     /**
-     * @ORM\Column(type="boolean")
+     * @ORM\Column(length=100, nullable=true)
+     *
+     * @Assert\Length(max=100)
      */
-    public ?bool $isCompany = false;
+    public ?string $company = null;
+
+    /**
+     * @ORM\Column(length=50, nullable=true)
+     *
+     * @Assert\Length(max=50)
+     */
+    public ?string $phone = null;
 
     /**
      * @ORM\Column(type="integer")
@@ -88,11 +97,6 @@ class Helper
      * @ORM\Column(type="integer")
      */
     public ?int $gloves = 0;
-
-    /**
-     * @ORM\Column(type="integer")
-     */
-    public ?int $disinfectant = 0;
 
     /**
      * @ORM\Column(type="integer")

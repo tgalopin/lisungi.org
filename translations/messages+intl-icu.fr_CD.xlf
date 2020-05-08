@@ -62,9 +62,9 @@
             </trans-unit>
             <trans-unit id="footer.data-statement" resname="footer.data-statement">
                 <source>
-                    <![CDATA[Vous disposez d'un droit d'accès, de rectification, d’effacement et de portabilité de vos données ainsi que d’un droit d'opposition et d'un droit de limitation du traitement des données vous concernant. Vous pouvez exercer vos droits en nous contactant à l'adresse suivante : <a href="mailto:team@lisungi.org">team@lisungi.org</a>.]]></source>
+                    <![CDATA[Vous disposez d'un droit d'accès, de rectification, d’effacement et de portabilité de vos données ainsi que d’un droit d'opposition et d'un droit de limitation du traitement des données vous concernant. Vous pouvez exercer vos droits en nous contactant à l'adresse suivante : <a href="mailto:contact@lisungi.org">contact@lisungi.org</a>.]]></source>
                 <target>
-                    <![CDATA[Vous disposez d'un droit d'accès, de rectification, d’effacement et de portabilité de vos données ainsi que d’un droit d'opposition et d'un droit de limitation du traitement des données vous concernant. Vous pouvez exercer vos droits en nous contactant à l'adresse suivante : <a href="mailto:team@lisungi.org">team@lisungi.org</a>.]]></target>
+                    <![CDATA[Vous disposez d'un droit d'accès, de rectification, d’effacement et de portabilité de vos données ainsi que d’un droit d'opposition et d'un droit de limitation du traitement des données vous concernant. Vous pouvez exercer vos droits en nous contactant à l'adresse suivante : <a href="mailto:contact@lisungi.org">contact@lisungi.org</a>.]]></target>
             </trans-unit>
 
             <trans-unit id="social.share-intro" resname="social.share-intro">
@@ -159,19 +159,19 @@
                 <target>Pasi na Yo Pasi na Ngai.</target>
             </trans-unit>
             <trans-unit id="home.work-title" resname="home.work-title">
-                <source>Je travaille en première ligne et j'ai besoin de matériel ou de denrées alimentaires</source>
-                <target>Je travaille en première ligne et j'ai besoin de matériel ou de denrées alimentaires</target>
+                <source>Je travaille en première ligne et j'ai besoin de matériel de protection ou de denrées alimentaires</source>
+                <target>Je travaille en première ligne et j'ai besoin de matériel de protection ou de denrées alimentaires</target>
             </trans-unit>
             <trans-unit id="home.work-intro" resname="home.work-intro">
                 <source>
-                    Vous faites partie de la première ligne de la lutte contre le virus (personnels soignants,
-                    membres de la cellule nationale de riposte, centre de prise en charge des patients à
-                    pathologies chroniques (diabétique, anémique), ...) ?
+                    Vous êtes professionnel ou une organisation de santé en première ligne de la lutte contre
+                    le virus (personnels soignants, membres de la cellule nationale de riposte, centre de prise
+                    en charge des patients à pathologies chroniques (diabétique, anémique), ...) ?
                 </source>
                 <target>
-                    Vous faites partie de la première ligne de la lutte contre le virus (personnels soignants,
-                    membres de la cellule nationale de riposte, centre de prise en charge des patients à
-                    pathologies chroniques (diabétique, anémique), ...) ?
+                    Vous êtes professionnel ou une organisation de santé en première ligne de la lutte contre
+                    le virus (personnels soignants, membres de la cellule nationale de riposte, centre de prise
+                    en charge des patients à pathologies chroniques (diabétique, anémique), ...) ?
                 </target>
             </trans-unit>
             <trans-unit id="home.work-request" resname="home.work-request">
@@ -186,20 +186,20 @@
             </trans-unit>
             <trans-unit id="home.title" resname="home.title">
                 <source>
-                    Je peux donner aux travailleurs en première ligne du matériel ou des denrées alimentaires
+                    Je peux donner aux travailleurs en première ligne du matériel de protection ou des denrées alimentaires
                 </source>
                 <target>
-                    Je peux donner aux travailleurs en première ligne du matériel ou des denrées alimentaires
+                    Je peux donner aux travailleurs en première ligne du matériel de protection ou des denrées alimentaires
                 </target>
             </trans-unit>
             <trans-unit id="home.young-healthy" resname="home.young-healthy">
                 <source>
-                    Vous disposez de matériel ou de denrées dont vous vous ne servez pas (matériel médical,
-                    denrées alimentaires, médicaments, savon, matelas, ...) ?
+                    Vous disposez de matériel ou de denrées dont vous vous ne servez pas
+                    (masques, gants, denrées alimentaires, savon ...) ?
                 </source>
                 <target>
-                    Vous disposez de matériel ou de denrées dont vous vous ne servez pas (matériel médical,
-                    denrées alimentaires, médicaments, savon, matelas, ...) ?
+                    Vous disposez de matériel ou de denrées dont vous vous ne servez pas
+                    (masques, gants, denrées alimentaires, savon ...) ?
                 </target>
             </trans-unit>
             <trans-unit id="home.intro" resname="home.intro">
@@ -220,52 +220,47 @@
                 <source><![CDATA[<strong>{percentage} %</strong> des demandes d'aide ont été résolues.]]></source>
                 <target><![CDATA[<strong>{percentage} %</strong> des demandes d'aide ont été résolues.]]></target>
             </trans-unit>
-            <trans-unit id="home.testimonial-one" resname="home.testimonial-one">
-                <source>
-                    <![CDATA[Mon mari et moi sommes infirmiers avec deux enfants en bas âge. J'ai découvert En Première Ligne hier à 22h en cherchant comment je pourrais aller faire mes courses : je me suis inscrite en quelques clics sur mon téléphone. Le lendemain lorsque je me suis réveillée à 5h30, j'avais la bonne surprise d'avoir un mail de mise en contact avec Thomas, qui a pu me livrer mes courses le jour même à 13h.<br /><br />Je recommande à tous les travailleurs dans le besoin de s'inscrire, c'est gratuit et rapide !]]></source>
-                <target>
-                    <![CDATA[Mon mari et moi sommes infirmiers avec deux enfants en bas âge. J'ai découvert En Première Ligne hier à 22h en cherchant comment je pourrais aller faire mes courses : je me suis inscrite en quelques clics sur mon téléphone. Le lendemain lorsque je me suis réveillée à 5h30, j'avais la bonne surprise d'avoir un mail de mise en contact avec Thomas, qui a pu me livrer mes courses le jour même à 13h.<br /><br />Je recommande à tous les travailleurs dans le besoin de s'inscrire, c'est gratuit et rapide !]]></target>
-            </trans-unit>
-            <trans-unit id="home.testimonial-one-from" resname="home.testimonial-one-from">
-                <source>- Marion, infirmière dans l'Ain</source>
-                <target>- Marion, infirmière dans l'Ain</target>
-            </trans-unit>
-            <trans-unit id="home.testimonial-two" resname="home.testimonial-two">
-                <source>
-                    <![CDATA[J'ai commencé mon confinement le vendredi 13 mars, avant la fermeture des bars et des lieux publics. Travaillant dans l'informatique, j'ai pu facilement me mettre en sécurité et arrêter toute sortie.<br /><br />Si le personnel médical est en première ligne, pour ma part, j'ai l'impression d'être dans un bunker. J'ai presque honte de la chance que j'ai.<br /><br />Je me suis inscrit sur lisungi.org car je veux aider ceux qui en ont besoin. En m'inscrivant, j'ai été mis en relation avec une personne qui est infirmière dans ma ville. Pour l'instant, elle a encore des réserves de nourriture pour plusieurs jours, mais elle sait que dans les prochains jours, quand la crise sanitaire aura pris encore plus d'ampleur, elle pourra compter sur moi.]]></source>
-                <target>
-                    <![CDATA[J'ai commencé mon confinement le vendredi 13 mars, avant la fermeture des bars et des lieux publics. Travaillant dans l'informatique, j'ai pu facilement me mettre en sécurité et arrêter toute sortie.<br /><br />Si le personnel médical est en première ligne, pour ma part, j'ai l'impression d'être dans un bunker. J'ai presque honte de la chance que j'ai.<br /><br />Je me suis inscrit sur lisungi.org car je veux aider ceux qui en ont besoin. En m'inscrivant, j'ai été mis en relation avec une personne qui est infirmière dans ma ville. Pour l'instant, elle a encore des réserves de nourriture pour plusieurs jours, mais elle sait que dans les prochains jours, quand la crise sanitaire aura pris encore plus d'ampleur, elle pourra compter sur moi.]]></target>
-            </trans-unit>
-            <trans-unit id="home.testimonial-two-from" resname="home.testimonial-two-from">
-                <source>- Alexandre, ingénieur dans le Nord</source>
-                <target>- Alexandre, ingénieur dans le Nord</target>
-            </trans-unit>
-
             <trans-unit id="offer.intro-one" resname="offer.intro-one">
                 <source>
-                    <![CDATA[Dans les prochaines semaines, de nombreuses personnes vont risquer leur santé, donner leur énergie 15h par jour pour sauver des vies et s’assurer que les fonctions vitales de notre pays sont encore assurées. <strong>Ils sont notre première ligne contre le virus.</strong>]]></source>
+                    <![CDATA[Dans les prochaines semaines, de nombreux professionnels vont risquer leur santé, donner leur énergie 15h par jour pour sauver des vies. <strong>Ils sont notre première ligne contre le virus.</strong>]]></source>
                 <target>
-                    <![CDATA[Dans les prochaines semaines, de nombreuses personnes vont risquer leur santé, donner leur énergie 15h par jour pour sauver des vies et s’assurer que les fonctions vitales de notre pays sont encore assurées. <strong>Ils sont notre première ligne contre le virus.</strong>]]></target>
+                    <![CDATA[Dans les prochaines semaines, de nombreux professionnels vont risquer leur santé, donner leur énergie 15h par jour pour sauver des vies. <strong>Ils sont notre première ligne contre le virus.</strong>]]></target>
             </trans-unit>
             <trans-unit id="offer.intro-two" resname="offer.intro-two">
-                <source>Permettons-leur de ne pas se préoccuper de qui gardera leurs enfants ou de s'il y aura
-                    suffisamment à manger chez eux quand ils rentreront.
+                <source>
+                    Permettons-leur de disposer de tout le matériel dont ils ont besoin pour faire face à l’épidémie.
                 </source>
-                <target>Permettons-leur de ne pas se préoccuper de qui gardera leurs enfants ou de s'il y aura
-                    suffisamment à manger chez eux quand ils rentreront.
+                <target>
+                    Permettons-leur de disposer de tout le matériel dont ils ont besoin pour faire face à l’épidémie.
                 </target>
             </trans-unit>
             <trans-unit id="offer.intro-three" resname="offer.intro-three">
                 <source>
-                    <![CDATA[<strong>Vous aussi, participez à la mobilisation contre l'épidémie.</strong> Remplissez le formulaire ci-dessous pour vous enregistrer en tant que personne capable d'aider. Si quelqu'un proche de chez vous a besoin d'aide, nous vous mettrons en relation par e-mail pour que vous puissiez les aider au mieux.]]></source>
+                    <![CDATA[<strong>Vous aussi, participez à la mobilisation contre l'épidémie.</strong> Remplissez le formulaire ci-dessous pour vous enregistrer en tant que personne ou organisation capable de donner du matériel de protection ou des denrées alimentaires. Si des professionnels de santé près de chez vous ont besoin de vos dons, nous vous mettrons en relation que vous puissiez les aider au mieux.]]></source>
                 <target>
-                    <![CDATA[<strong>Vous aussi, participez à la mobilisation contre l'épidémie.</strong> Remplissez le formulaire ci-dessous pour vous enregistrer en tant que personne capable d'aider. Si quelqu'un proche de chez vous a besoin d'aide, nous vous mettrons en relation par e-mail pour que vous puissiez les aider au mieux.]]></target>
+                    <![CDATA[<strong>Vous aussi, participez à la mobilisation contre l'épidémie.</strong> Remplissez le formulaire ci-dessous pour vous enregistrer en tant que personne ou organisation capable de donner du matériel de protection ou des denrées alimentaires. Si des professionnels de santé près de chez vous ont besoin de vos dons, nous vous mettrons en relation que vous puissiez les aider au mieux.]]></target>
             </trans-unit>
             <trans-unit id="offer.intro-four" resname="offer.intro-four">
                 <source>
-                    <![CDATA[Ne soyez volontaire que si vous êtes jeune (moins de 60 ans) et en bonne santé : il ne sert à rien que vous preniez des risques inutiles, quelqu'un d'autre pourra aider à votre place. Vous pouvez vérifier si vous faites partie des publics à risque <a href="https://solidarites-sante.gouv.fr/actualites/actualites-du-ministere/article/coronavirus-qui-sont-les-personnes-fragiles">sur le site du ministère de la Santé</a>.]]></source>
+                    ATTENTION : Lisungi.org a pour objectif de venir en aide aux professionnels de santé en première
+                    ligne contre le virus dans une démarche de dons solidaire.
+                </source>
                 <target>
-                    <![CDATA[Ne soyez volontaire que si vous êtes jeune (moins de 60 ans) et en bonne santé : il ne sert à rien que vous preniez des risques inutiles, quelqu'un d'autre pourra aider à votre place. Vous pouvez vérifier si vous faites partie des publics à risque <a href="https://solidarites-sante.gouv.fr/actualites/actualites-du-ministere/article/coronavirus-qui-sont-les-personnes-fragiles">sur le site du ministère de la Santé</a>.]]></target>
+                    ATTENTION : Lisungi.org a pour objectif de venir en aide aux professionnels de santé en première
+                    ligne contre le virus dans une démarche de dons solidaire.
+                </target>
+            </trans-unit>
+            <trans-unit id="offer.intro-five" resname="offer.intro-five">
+                <source>
+                    Toute demande et/ou toute offre contraire à l’ordre public et aux bonnes mœurs,
+                    toute tentative de marché noir et plus largement tout comportement visant à utiliser
+                    le site à des fins détournées de son objet sera immédiatement rapporté aux autorités.
+                </source>
+                <target>
+                    Toute demande et/ou toute offre contraire à l’ordre public et aux bonnes mœurs,
+                    toute tentative de marché noir et plus largement tout comportement visant à utiliser
+                    le site à des fins détournées de son objet sera immédiatement rapporté aux autorités.
+                </target>
             </trans-unit>
             <trans-unit id="offer.my-offer" resname="offer.my-offer">
                 <source>Ma proposition d'aide</source>
@@ -343,23 +338,49 @@
             </trans-unit>
 
             <trans-unit id="request.intro-one" resname="request.intro-one">
-                <source>Vous faites partie de la première ligne de la lutte contre le virus (soignants, services
-                    d’urgence, approvisionnement en énergie, nourriture, médicaments, matériel, ...) ?
+                <source>
+                    Vous faites partie des professionnels de santé en première ligne contre contre le virus ?
                 </source>
-                <target>Vous faites partie de la première ligne de la lutte contre le virus (soignants, services
-                    d’urgence, approvisionnement en énergie, nourriture, médicaments, matériel, ...) ?
+                <target>
+                    Vous faites partie des professionnels de santé en première ligne contre contre le virus ?
                 </target>
             </trans-unit>
             <trans-unit id="request.intro-two" resname="request.intro-two">
-                <source>Remplissez le formulaire ci-dessous pour vous enregistrer en tant que personne ayant besoin
-                    d'aide. Si quelqu'un proche de chez vous peut vous aider pour le type de besoin que vous avez
-                    exprimé, nous vous mettrons en relation par e-mail pour que vous puissiez échanger et régler les
-                    détails logistiques.
+                <source>
+                    Remplissez le formulaire ci-dessous pour vous enregistrer en tant que personne ou
+                    organisation ayant besoin d'aide. Si quelqu'un proche de chez vous peut vous aider
+                    pour le type de besoin que vous avez exprimé, nous vous mettrons en relation pour
+                    que vous puissiez échanger et régler les détails logistiques.
                 </source>
-                <target>Remplissez le formulaire ci-dessous pour vous enregistrer en tant que personne ayant besoin
-                    d'aide. Si quelqu'un proche de chez vous peut vous aider pour le type de besoin que vous avez
-                    exprimé, nous vous mettrons en relation par e-mail pour que vous puissiez échanger et régler les
-                    détails logistiques.
+                <target>
+                    Remplissez le formulaire ci-dessous pour vous enregistrer en tant que personne ou
+                    organisation ayant besoin d'aide. Si quelqu'un proche de chez vous peut vous aider
+                    pour le type de besoin que vous avez exprimé, nous vous mettrons en relation pour
+                    que vous puissiez échanger et régler les détails logistiques.
+                </target>
+            </trans-unit>
+            <trans-unit id="request.intro-three" resname="request.intro-three">
+                <source>
+                    ATTENTION : Lisungi.org a pour objectif de venir en aide aux professionnels de santé
+                    en première ligne contre le virus dans une démarche de dons solidaire.
+                </source>
+                <target>
+                    ATTENTION : Lisungi.org a pour objectif de venir en aide aux professionnels de santé
+                    en première ligne contre le virus dans une démarche de dons solidaire.
+                </target>
+            </trans-unit>
+            <trans-unit id="request.intro-four" resname="request.intro-four">
+                <source>
+                    Toute demande et/ou toute offre contraire à l’ordre public et aux bonnes mœurs,
+                    toute tentative de marché noir et plus largement tout comportement visant à
+                    utiliser le site web à des fins détournées de son objet sera immédiatement
+                    rapporté aux autorités.
+                </source>
+                <target>
+                    Toute demande et/ou toute offre contraire à l’ordre public et aux bonnes mœurs,
+                    toute tentative de marché noir et plus largement tout comportement visant à
+                    utiliser le site web à des fins détournées de son objet sera immédiatement
+                    rapporté aux autorités.
                 </target>
             </trans-unit>
             <trans-unit id="request.my-request" resname="request.my-request">
@@ -520,9 +541,23 @@
                 <source>Votre commune (requis)</source>
                 <target>Votre commune (requis)</target>
             </trans-unit>
-            <trans-unit id="label.is-company" resname="label.is-company">
-                <source>J'effectue ce don en tant qu'entreprise ou organisation</source>
-                <target>J'effectue ce don en tant qu'entreprise ou organisation</target>
+            <trans-unit id="label.company" resname="label.company">
+                <source>Votre entreprise ou organisation (facultatif)</source>
+                <target>Votre entreprise ou organisation (facultatif)</target>
+            </trans-unit>
+            <trans-unit id="label.phone" resname="label.phone">
+                <source>Votre numéro de téléphone (facultatif)</source>
+                <target>Votre numéro de téléphone (facultatif)</target>
+            </trans-unit>
+            <trans-unit id="help.company" resname="help.company">
+                <source>
+                    Entreprise ou organisation au nom de laquelle vous effectuez ce don.
+                    Laissez vide si vous effectuez ce don à titre individuel.
+                </source>
+                <target>
+                    Entreprise ou organisation au nom de laquelle vous effectuez ce don.
+                    Laissez vide si vous effectuez ce don à titre individuel.
+                </target>
             </trans-unit>
             <trans-unit id="label.locality" resname="label.locality">
                 <source>Code postal</source>
@@ -604,10 +639,6 @@
                 <source>Je peux donner des gants</source>
                 <target>Je peux donner des gants</target>
             </trans-unit>
-            <trans-unit id="label.helper-disinfectant" resname="label.helper-disinfectant">
-                <source>Je peux donner du désinfectant</source>
-                <target>Je peux donner du désinfectant</target>
-            </trans-unit>
             <trans-unit id="label.helper-paracetamol" resname="label.helper-paracetamol">
                 <source>Je peux donner du paracétamol</source>
                 <target>Je peux donner du paracétamol</target>
@@ -623,6 +654,26 @@
             <trans-unit id="label.helper-other" resname="label.helper-other">
                 <source>Je peux donner d'autres choses</source>
                 <target>Je peux donner d'autres choses</target>
+            </trans-unit>
+            <trans-unit id="label.confirm_legal" resname="label.confirm_legal">
+                <source>
+                    Je certifie m'être assuré(e) de la conformité du matériel proposé avec les règles de
+                    l’Office  Congolais de Contrôle (OCC) ainsi que du respect des brevets légaux associés.
+                </source>
+                <target>
+                    Je certifie m'être assuré(e) de la conformité du matériel proposé avec les règles de
+                    l’Office  Congolais de Contrôle (OCC) ainsi que du respect des brevets légaux associés.
+                </target>
+            </trans-unit>
+            <trans-unit id="label.confirm_health" resname="label.confirm_health">
+                <source>
+                    Je certifie être un professionnel de santé en première ligne avec
+                    un besoin réel de matériel de protection ou de denrées alimentaires.
+                </source>
+                <target>
+                    Je certifie être un professionnel de santé en première ligne avec
+                    un besoin réel de matériel de protection ou de denrées alimentaires.
+                </target>
             </trans-unit>
             <trans-unit id="label.confirm" resname="label.confirm">
                 <source>J'ai lu et j'accepte la Politique de confidentialité et les Conditions d'utilisation
@@ -747,10 +798,6 @@
             <trans-unit id="label.need-gloves" resname="label.need-gloves">
                 <source>J'ai besoin de gants</source>
                 <target>J'ai besoin de gants</target>
-            </trans-unit>
-            <trans-unit id="label.need-disinfectant" resname="label.need-disinfectant">
-                <source>J'ai besoin de désinfectant</source>
-                <target>J'ai besoin de désinfectant</target>
             </trans-unit>
             <trans-unit id="label.need-paracetamol" resname="label.need-paracetamol">
                 <source>J'ai besoin de paracétamol</source>
@@ -1237,9 +1284,9 @@
             </trans-unit>
             <trans-unit id="email.site-helped" resname="email.site-helped">
                 <source>
-                    <![CDATA[PS : si notre plateforme vous a aidé(e), n'hésitez pas à nous le dire à <a href="mailto:team@lisungi.org">team@lisungi.org</a>. Nous sommes à votre disposition !]]></source>
+                    <![CDATA[PS : si notre plateforme vous a aidé(e), n'hésitez pas à nous le dire à <a href="mailto:contact@lisungi.org">contact@lisungi.org</a>. Nous sommes à votre disposition !]]></source>
                 <target>
-                    <![CDATA[PS : si notre plateforme vous a aidé(e), n'hésitez pas à nous le dire à <a href="mailto:team@lisungi.org">team@lisungi.org</a>. Nous sommes à votre disposition !]]></target>
+                    <![CDATA[PS : si notre plateforme vous a aidé(e), n'hésitez pas à nous le dire à <a href="mailto:contact@lisungi.org">contact@lisungi.org</a>. Nous sommes à votre disposition !]]></target>
             </trans-unit>
 
             <trans-unit id="email.avoid-contact" resname="email.avoid-contact">
