@@ -5,6 +5,7 @@ namespace App\DataFixtures;
 use App\Entity\Admin;
 use App\Entity\Helper;
 use App\Entity\HelpRequest;
+use App\MatchFinder\Locality;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
 use Ramsey\Uuid\Uuid;
@@ -22,8 +23,8 @@ class AppFixtures extends Fixture
     public function load(ObjectManager $manager)
     {
         $this->loadAdmin($manager);
-        // $this->loadHelpers($manager);
-        // $this->loadHelpRequests($manager);
+        $this->loadHelpers($manager);
+        $this->loadHelpRequests($manager);
 
         $manager->flush();
     }
@@ -44,27 +45,33 @@ class AppFixtures extends Fixture
                 'firstName' => 'Elizabeth',
                 'lastName' => 'Gregory',
                 'email' => 'elizabeth.gregory@example.com',
-                'zipCode' => '75008',
-                'age' => 25,
-                'haveChildren' => false,
-                'canBabysit' => true,
-                'babysitMaxChildren' => 1,
-                'babysitAgeRanges' => null,
-                'canBuyGroceries' => true,
-                'acceptVulnerable' => true,
+                'phone' => '022 281 4578',
+                'locality' => Locality::LOCALITIES['fr_CD']['KALAMU'],
+                'company' => 'Citipo',
+                'masks' => 10,
+                'glasses' => 0,
+                'blouses' => 0,
+                'gel' => 500,
+                'gloves' => 0,
+                'soap' => 0,
+                'food' => null,
+                'other' => null,
             ],
             [
                 'firstName' => 'Linette',
                 'lastName' => 'Fremont',
                 'email' => 'linette.fremont@example.com',
-                'zipCode' => '66100',
-                'age' => 27,
-                'haveChildren' => false,
-                'canBabysit' => false,
-                'babysitMaxChildren' => 1,
-                'babysitAgeRanges' => null,
-                'canBuyGroceries' => true,
-                'acceptVulnerable' => true,
+                'phone' => '022 281 4578',
+                'locality' => Locality::LOCALITIES['fr_CD']['MALUKU'],
+                'company' => null,
+                'masks' => 0,
+                'glasses' => 10,
+                'blouses' => 0,
+                'gel' => 0,
+                'gloves' => 25,
+                'soap' => 0,
+                'food' => 'Riz et poulet',
+                'other' => null,
             ],
         ];
 
@@ -73,14 +80,17 @@ class AppFixtures extends Fixture
             $helper->firstName = $data['firstName'];
             $helper->lastName = $data['lastName'];
             $helper->email = $data['email'];
-            $helper->zipCode = $data['zipCode'];
-            $helper->age = $data['age'];
-            $helper->haveChildren = $data['haveChildren'];
-            $helper->canBabysit = $data['canBabysit'];
-            $helper->babysitMaxChildren = $data['babysitMaxChildren'];
-            $helper->babysitAgeRanges = $data['babysitAgeRanges'];
-            $helper->canBuyGroceries = $data['canBuyGroceries'];
-            $helper->acceptVulnerable = $data['acceptVulnerable'];
+            $helper->phone = $data['phone'];
+            $helper->locality = $data['locality'];
+            $helper->company = $data['company'];
+            $helper->masks = $data['masks'];
+            $helper->glasses = $data['glasses'];
+            $helper->blouses = $data['blouses'];
+            $helper->gel = $data['gel'];
+            $helper->gloves = $data['gloves'];
+            $helper->soap = $data['soap'];
+            $helper->food = $data['food'];
+            $helper->other = $data['other'];
 
             $manager->persist($helper);
         }
@@ -90,63 +100,50 @@ class AppFixtures extends Fixture
     {
         $requests = [
             [
-                'helpType' => HelpRequest::TYPE_BABYSIT,
+                'helpType' => HelpRequest::TYPE_MASKS,
                 'ownerUuid' => 'cd34e489-ec5a-4fb7-8fa5-e36554f1cd6c',
                 'firstName' => 'Jeanne',
                 'lastName' => 'Martin',
                 'email' => 'jeanne.martin@example.com',
-                'zipCode' => '75008',
-                'jobType' => 'health',
-                'childAgeRange' => HelpRequest::AGE_RANGE_35,
+                'phone' => '022 281 4578',
+                'organization' => null,
+                'locality' => Locality::LOCALITIES['fr_CD']['MALUKU'],
+                'quantity' => 5,
             ],
             [
-                'helpType' => HelpRequest::TYPE_GROCERIES,
+                'helpType' => HelpRequest::TYPE_GLOVES,
                 'ownerUuid' => 'cd34e489-ec5a-4fb7-8fa5-e36554f1cd6c',
                 'firstName' => 'Jeanne',
                 'lastName' => 'Martin',
                 'email' => 'jeanne.martin@example.com',
-                'zipCode' => '75008',
-                'jobType' => 'health',
-                'childAgeRange' => null,
+                'phone' => '022 281 4578',
+                'organization' => null,
+                'locality' => Locality::LOCALITIES['fr_CD']['MALUKU'],
+                'quantity' => 5,
             ],
             [
-                'helpType' => HelpRequest::TYPE_GROCERIES,
+                'helpType' => HelpRequest::TYPE_GEL,
                 'ownerUuid' => '4c4813df-ac99-4484-9cde-fdda1a7a910d',
                 'firstName' => 'Catherine',
                 'lastName' => 'Lambert',
                 'email' => 'catherine.lambert@example.com',
-                'zipCode' => '75010',
-                'jobType' => 'food',
-                'childAgeRange' => null,
-            ],
-            [
-                'helpType' => HelpRequest::TYPE_GROCERIES,
-                'ownerUuid' => 'ec6b86d5-27d9-4a61-980a-11a87aa785dc',
-                'firstName' => 'Édith',
-                'lastName' => 'Talon',
-                'email' => 'edith.talon@example.com',
-                'zipCode' => '66100',
-                'jobType' => 'vulnerable',
-                'ccFirstName' => 'Aurélien',
-                'ccLastName' => 'Talon',
-                'ccEmail' => 'aurelien.talon@example.com',
-                'childAgeRange' => null,
+                'phone' => '022 281 4578',
+                'organization' => 'Citipo',
+                'locality' => Locality::LOCALITIES['fr_CD']['KALAMU'],
+                'quantity' => 300,
             ],
         ];
 
         foreach ($requests as $data) {
             $request = new HelpRequest();
-            $request->helpType = $data['helpType'];
+            $request->type = $data['helpType'];
             $request->ownerUuid = Uuid::fromString($data['ownerUuid']);
             $request->firstName = $data['firstName'];
             $request->lastName = $data['lastName'];
             $request->email = $data['email'];
-            $request->zipCode = $data['zipCode'];
-            $request->jobType = $data['jobType'];
-            $request->childAgeRange = $data['childAgeRange'];
-            $request->ccFirstName = $data['ccFirstName'] ?? null;
-            $request->ccLastName = $data['ccLastName'] ?? null;
-            $request->ccEmail = $data['ccEmail'] ?? null;
+            $request->locality = $data['locality'];
+            $request->phone = $data['phone'];
+            $request->quantity = $data['quantity'];
 
             $manager->persist($request);
         }

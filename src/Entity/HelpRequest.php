@@ -20,7 +20,6 @@ class HelpRequest
     public const TYPE_BLOUSES = 'blouses';
     public const TYPE_GEL = 'gel';
     public const TYPE_GLOVES = 'gloves';
-    public const TYPE_PARACETAMOL = 'paracetamol';
     public const TYPE_SOAP = 'soap';
     public const TYPE_FOOD = 'food';
     public const TYPE_OTHER = 'other';
@@ -97,7 +96,7 @@ class HelpRequest
     public ?int $quantity = 0;
 
     /**
-     * @ORM\Column(length=250)
+     * @ORM\Column(length=250, nullable=true)
      */
     public ?string $details;
 
@@ -130,7 +129,6 @@ class HelpRequest
             self::TYPE_BLOUSES,
             self::TYPE_GEL,
             self::TYPE_GLOVES,
-            self::TYPE_PARACETAMOL,
             self::TYPE_SOAP,
             self::TYPE_FOOD,
             self::TYPE_OTHER,

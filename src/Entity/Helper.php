@@ -101,11 +101,6 @@ class Helper
     /**
      * @ORM\Column(type="integer")
      */
-    public ?int $paracetamol = 0;
-
-    /**
-     * @ORM\Column(type="integer")
-     */
     public ?int $soap = 0;
 
     /**

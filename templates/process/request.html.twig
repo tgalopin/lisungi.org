@@ -89,10 +89,7 @@
                                 {% elseif type in ['gloves'] %}
                                     {{ form_row(fields.quantity, {'label': 'help.need-how-many-pairs'|trans}) }}
                                     <div class="d-none">{{ form_row(fields.details) }}</div>
-                                {% elseif type in ['paracetamol'] %}
-                                    {{ form_row(fields.quantity, {'label': 'help.need-how-many-doses'|trans}) }}
-                                    <div class="d-none">{{ form_row(fields.details) }}</div>
-                                {% elseif type in ['other'] %}
+                                % elseif type in ['other'] %}
                                     {{ form_row(fields.details, {'label': 'help.need-other'|trans}) }}
                                     <div class="d-none">{{ form_row(fields.quantity) }}</div>
                                 {% elseif type in ['food'] %}

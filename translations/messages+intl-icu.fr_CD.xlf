@@ -705,10 +705,6 @@
                 <source>Je peux donner des gants</source>
                 <target>Je peux donner des gants</target>
             </trans-unit>
-            <trans-unit id="label.helper-paracetamol" resname="label.helper-paracetamol">
-                <source>Je peux donner du paracétamol</source>
-                <target>Je peux donner du paracétamol</target>
-            </trans-unit>
             <trans-unit id="label.helper-food" resname="label.helper-food">
                 <source>Je peux donner de la nourriture</source>
                 <target>Je peux donner de la nourriture</target>
@@ -874,10 +870,6 @@
             <trans-unit id="label.need-gloves" resname="label.need-gloves">
                 <source>J'ai besoin de gants</source>
                 <target>J'ai besoin de gants</target>
-            </trans-unit>
-            <trans-unit id="label.need-paracetamol" resname="label.need-paracetamol">
-                <source>J'ai besoin de paracétamol</source>
-                <target>J'ai besoin de paracétamol</target>
             </trans-unit>
             <trans-unit id="label.need-soap" resname="label.need-soap">
                 <source>J'ai besoin de savon</source>

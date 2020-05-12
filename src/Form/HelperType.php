@@ -30,7 +30,6 @@ class HelperType extends AbstractType
             ->add('blouses', NumberType::class, ['required' => false])
             ->add('gel', NumberType::class, ['required' => false])
             ->add('gloves', NumberType::class, ['required' => false])
-            ->add('paracetamol', NumberType::class, ['required' => false])
             ->add('soap', NumberType::class, ['required' => false])
             ->add('food', TextType::class, ['required' => false])
             ->add('other', TextType::class, ['required' => false])
