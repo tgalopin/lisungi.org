@@ -7,8 +7,8 @@
                 <target>Lisungi</target>
             </trans-unit>
             <trans-unit id="site.title" resname="site.title">
-                <source>Pasi na Yo Pasi na Ngai</source>
-                <target>Pasi na Yo Pasi na Ngai</target>
+                <source>Bomoko Kati na Pasi</source>
+                <target>Bomoko Kati na Pasi</target>
             </trans-unit>
             <trans-unit id="site.url" resname="site.url">
                 <source>https://lisungi.org</source>
@@ -212,6 +212,30 @@
                     dans la lutte contre l’épidémie.
                 </target>
             </trans-unit>
+            <trans-unit id="home.volunteer" resname="home.volunteer">
+                <source>
+                    Je peux donner mon aide à Lisungi
+                </source>
+                <target>
+                    Je peux donner mon aide à Lisungi
+                </target>
+            </trans-unit>
+            <trans-unit id="home.volunteer.young-healthy" resname="home.volunteer.young-healthy">
+                <source>
+                    Vous êtes jeune et en bonne santé ?
+                </source>
+                <target>
+                    Vous êtes jeune et en bonne santé ?
+                </target>
+            </trans-unit>
+            <trans-unit id="home.volunteer.intro" resname="home.volunteer.intro">
+                <source>
+                    Aidez-nous à organiser et acheminer les dons jusqu'à ceux qui en ont besoin. Rejoignez Lisungi !
+                </source>
+                <target>
+                    Aidez-nous à organiser et acheminer les dons jusqu'à ceux qui en ont besoin. Rejoignez Lisungi !
+                </target>
+            </trans-unit>
             <trans-unit id="home.number-volunteers" resname="home.number-volunteers">
                 <source><![CDATA[Nous sommes <strong>{count} volontaires</strong>.]]></source>
                 <target><![CDATA[Nous sommes <strong>{count} volontaires</strong>.]]></target>
@@ -251,6 +275,48 @@
                 </target>
             </trans-unit>
             <trans-unit id="offer.intro-five" resname="offer.intro-five">
+                <source>
+                    Toute demande et/ou toute offre contraire à l’ordre public et aux bonnes mœurs,
+                    toute tentative de marché noir et plus largement tout comportement visant à utiliser
+                    le site à des fins détournées de son objet sera immédiatement rapporté aux autorités.
+                </source>
+                <target>
+                    Toute demande et/ou toute offre contraire à l’ordre public et aux bonnes mœurs,
+                    toute tentative de marché noir et plus largement tout comportement visant à utiliser
+                    le site à des fins détournées de son objet sera immédiatement rapporté aux autorités.
+                </target>
+            </trans-unit>
+            <trans-unit id="offer.volunteer.intro-one" resname="offer.volunteer.intro-one">
+                <source>
+                    <![CDATA[Dans les prochaines semaines, de nombreux professionnels vont risquer leur santé, donner leur énergie 15h par jour pour sauver des vies. <strong>Ils sont notre première ligne contre le virus.</strong>]]></source>
+                <target>
+                    <![CDATA[Dans les prochaines semaines, de nombreux professionnels vont risquer leur santé, donner leur énergie 15h par jour pour sauver des vies. <strong>Ils sont notre première ligne contre le virus.</strong>]]></target>
+            </trans-unit>
+            <trans-unit id="offer.volunteer.intro-two" resname="offer.volunteer.intro-two">
+                <source>
+                    Permettons-leur de disposer de tout le matériel dont ils ont besoin pour faire face à l’épidémie.
+                </source>
+                <target>
+                    Permettons-leur de disposer de tout le matériel dont ils ont besoin pour faire face à l’épidémie.
+                </target>
+            </trans-unit>
+            <trans-unit id="offer.volunteer.intro-three" resname="offer.volunteer.intro-three">
+                <source>
+                    <![CDATA[<strong>Vous aussi, participez à la mobilisation contre l'épidémie.</strong> Remplissez le formulaire ci-dessous pour aider Lisungi à organiser la logistique des dons.]]></source>
+                <target>
+                    <![CDATA[<strong>Vous aussi, participez à la mobilisation contre l'épidémie.</strong> Remplissez le formulaire ci-dessous pour aider Lisungi à organiser la logistique des dons.]]></target>
+            </trans-unit>
+            <trans-unit id="offer.volunteer.intro-four" resname="offer.volunteer.intro-four">
+                <source>
+                    ATTENTION : Lisungi.org a pour objectif de venir en aide aux professionnels de santé en première
+                    ligne contre le virus dans une démarche de dons solidaire.
+                </source>
+                <target>
+                    ATTENTION : Lisungi.org a pour objectif de venir en aide aux professionnels de santé en première
+                    ligne contre le virus dans une démarche de dons solidaire.
+                </target>
+            </trans-unit>
+            <trans-unit id="offer.volunteer.intro-five" resname="offer.volunteer.intro-five">
                 <source>
                     Toute demande et/ou toute offre contraire à l’ordre public et aux bonnes mœurs,
                     toute tentative de marché noir et plus largement tout comportement visant à utiliser
@@ -673,6 +739,16 @@
                 <target>
                     Je certifie être un professionnel de santé en première ligne avec
                     un besoin réel de matériel de protection ou de denrées alimentaires.
+                </target>
+            </trans-unit>
+            <trans-unit id="label.confirm_volunteer" resname="label.confirm_volunteer">
+                <source>
+                    Je certifie m'être assuré(e) de ne pas faire partie des populations à risques vis à vis
+                    de la crise sanitaire actuelle.
+                </source>
+                <target>
+                    Je certifie m'être assuré(e) de ne pas faire partie des populations à risques vis à vis
+                    de la crise sanitaire actuelle.
                 </target>
             </trans-unit>
             <trans-unit id="label.confirm" resname="label.confirm">

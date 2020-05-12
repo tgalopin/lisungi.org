@@ -2,7 +2,6 @@
 
 namespace App\Statistics;
 
-use App\MatchFinder\ZipCode;
 use Doctrine\DBAL\Driver\Connection;
 
 class StatisticsAggregator

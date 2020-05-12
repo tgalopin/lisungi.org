@@ -53,6 +53,13 @@ class Helper
     public ?string $email = '';
 
     /**
+     * @ORM\Column(length=50, nullable=true)
+     *
+     * @Assert\Length(max=50)
+     */
+    public ?string $phone = null;
+
+    /**
      * @ORM\Column(length=50)
      *
      * @Assert\NotBlank(message="locality.required")
@@ -65,13 +72,6 @@ class Helper
      * @Assert\Length(max=100)
      */
     public ?string $company = null;
-
-    /**
-     * @ORM\Column(length=50, nullable=true)
-     *
-     * @Assert\Length(max=50)
-     */
-    public ?string $phone = null;
 
     /**
      * @ORM\Column(type="integer")
@@ -134,17 +134,11 @@ class Helper
      */
     private Collection $requests;
 
-    /**
-     * @ORM\OneToMany(targetEntity="App\Entity\BlockedMatch", mappedBy="helper", orphanRemoval=true)
-     */
-    private Collection $blockedMatches;
-
     public function __construct()
     {
         $this->uuid = Uuid::uuid4();
         $this->createdAt = new \DateTime();
         $this->requests = new ArrayCollection();
-        $this->blockedMatches = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -173,13 +167,5 @@ class Helper
     public function getRequests(): Collection
     {
         return $this->requests;
-    }
-
-    /**
-     * @return Collection|BlockedMatch[]
-     */
-    public function getBlockedMatches(): Collection
-    {
-        return $this->blockedMatches;
     }
 }

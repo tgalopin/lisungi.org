@@ -17,13 +17,13 @@ $gray-800: #373a3c !default;
 $gray-900: #212529 !default;
 $black:    #000 !default;
 
-$blue:    #004aad !default;
+$blue:    #1577e9 !default;
 $indigo:  #6610f2 !default;
 $purple:  #613d7c !default;
 $pink:    #e83e8c !default;
-$red:     #ce1021 !default;
+$red:     #ca171a !default;
 $orange:  #f0ad4e !default;
-$yellow:  #f7d618 !default;
+$yellow:  #f6d800 !default;
 $green:   #229a16 !default;
 $teal:    #3182CE !default;
 
@@ -34,7 +34,7 @@ $info:          $red !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $gray-100 !default;
-$dark:          $gray-200 !default;
+$dark:          $gray-800 !default;
 
 $theme-colors: ("teal": $teal);
 
