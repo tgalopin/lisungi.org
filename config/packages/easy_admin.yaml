@@ -7,24 +7,23 @@ easy_admin:
             - { route: 'security_logout', label: 'Log out', icon: 'sign-out' }
 
             - { label: 'Matchings' }
-            - { route: 'admin_matches', label: 'Matches', icon: 'check' }
-            - { route: 'admin_match_history', label: 'History', icon: 'history' }
+            # - { route: 'admin_matches', label: 'Matches', icon: 'check' }
+            # - { route: 'admin_match_history', label: 'History', icon: 'history' }
             - { entity: 'Helper', label: 'Helpers', icon: 'users' }
             - { entity: 'HelpRequest', label: 'Help requests', icon: 'handshake-o' }
-            - { entity: 'BlockedMatch', label: 'Blocked matches', icon: 'times' }
 
-            - { label: 'Monitoring' }
-            - { route: 'admin_statistics', label: 'Statistics', icon: 'chart-bar' }
-            - { route: 'admin_unmatched_list', label: 'Unmatched needs', icon: 'search' }
+            # - { label: 'Monitoring' }
+            # - { route: 'admin_statistics', label: 'Statistics', icon: 'chart-bar' }
+            # - { route: 'admin_unmatched_list', label: 'Unmatched needs', icon: 'search' }
 
-            - { label: 'Maps' }
-            - { route: 'admin_map_requests', label: 'All requests', icon: 'map-o', target: '_blank' }
-            - { route: 'admin_map_helpers', label: 'Helpers by department', icon: 'map-o' }
+            # - { label: 'Maps' }
+            # - { route: 'admin_map_requests', label: 'All requests', icon: 'map-o', target: '_blank' }
+            # - { route: 'admin_map_helpers', label: 'Helpers by department', icon: 'map-o' }
 
-            - { label: 'Export' }
-            - { route: 'admin_export_helpers', label: 'Export helpers', icon: 'cloud-download', target: '_blank' }
-            - { route: 'admin_export_helpers_by_zip_code', label: 'Export zip codes', icon: 'cloud-download', target: '_blank' }
-            - { route: 'admin_export_unmatched', label: 'Export unmatched', icon: 'cloud-download', target: '_blank' }
+            # - { label: 'Export' }
+            # - { route: 'admin_export_helpers', label: 'Export helpers', icon: 'cloud-download', target: '_blank' }
+            # - { route: 'admin_export_helpers_by_zip_code', label: 'Export zip codes', icon: 'cloud-download', target: '_blank' }
+            # - { route: 'admin_export_unmatched', label: 'Export unmatched', icon: 'cloud-download', target: '_blank' }
 
     entities:
         Helper:
@@ -39,13 +38,11 @@ easy_admin:
                     - { name: 'delete', template: 'admin/actions/delete_helper.html.twig' }
                 fields:
                     - id
-                    - { property: 'zipCode', label: 'CP' }
+                    - { property: 'locality', label: 'Commune' }
                     - { property: 'firstName', label: 'First name' }
                     - { property: 'lastName', label: 'Last name' }
                     - { property: 'email', label: 'E-mail' }
-                    - { property: 'canBabysit', label: 'Babysit' }
-                    - { property: 'canBuyGroceries', label: 'Groceries' }
-                    - { property: 'acceptVulnerable', label: 'Vulnerable' }
+                    - { property: 'phone', label: 'Phone' }
                     - { property: 'createdAt', label: 'Date' }
 
         HelpRequest:
@@ -57,24 +54,10 @@ easy_admin:
                 sort: ['createdAt', 'DESC']
                 fields:
                     - id
-                    - { property: 'zipCode', label: 'CP' }
-                    - { property: 'helpType', label: 'Type' }
+                    - { property: 'locality', label: 'Commune' }
+                    - { property: 'type', label: 'Type' }
                     - { property: 'firstName', label: 'First name' }
                     - { property: 'lastName', label: 'Last name' }
                     - { property: 'email', label: 'E-mail' }
-                    - { property: 'isMatched', type: 'boolean', label: 'Matched?' }
-                    - { property: 'createdAt', label: 'Date' }
-
-        BlockedMatch:
-            class: App\Entity\BlockedMatch
-            disabled_actions: ['show', 'new', 'edit']
-            list:
-                title: Blocked matches
-                max_results: 100
-                sort: ['createdAt', 'DESC']
-                fields:
-                    - id
-                    - { property: 'owner', label: 'Requester' }
-                    - { property: 'helper.firstName', label: 'Helper first name' }
-                    - { property: 'helper.lastName', label: 'Helper last name' }
+                    - { property: 'phone', label: 'Phone' }
                     - { property: 'createdAt', label: 'Date' }
