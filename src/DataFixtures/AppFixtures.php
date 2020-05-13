@@ -174,5 +174,4 @@ class AppFixtures extends Fixture
             $manager->persist($volunteer);
         }
     }
-
 }
