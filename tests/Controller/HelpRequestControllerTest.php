@@ -10,7 +10,7 @@ use Symfony\Component\HttpFoundation\Response;
 
 class HelpRequestControllerTest extends WebTestCase
 {
-    public function testRequest()
+    public function testRequestCreate()
     {
         $client = static::createClient();
 

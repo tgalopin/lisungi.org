@@ -5,6 +5,7 @@ namespace App\DataFixtures;
 use App\Entity\Admin;
 use App\Entity\Helper;
 use App\Entity\HelpRequest;
+use App\Entity\Volunteer;
 use App\MatchFinder\Locality;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
@@ -25,6 +26,7 @@ class AppFixtures extends Fixture
         $this->loadAdmin($manager);
         $this->loadHelpers($manager);
         $this->loadHelpRequests($manager);
+        $this->loadVolunteers($manager);
 
         $manager->flush();
     }
@@ -148,4 +150,29 @@ class AppFixtures extends Fixture
             $manager->persist($request);
         }
     }
+
+    private function loadVolunteers(ObjectManager $manager)
+    {
+        $volunteers = [
+            [
+                'firstName' => 'Adrien',
+                'lastName' => 'Duguet',
+                'email' => 'adrien.duguet@example.com',
+                'phone' => '022 281 4578',
+                'locality' => Locality::LOCALITIES['fr_CD']['KALAMU'],
+            ],
+        ];
+
+        foreach ($volunteers as $data) {
+            $volunteer = new Volunteer();
+            $volunteer->firstName = $data['firstName'];
+            $volunteer->lastName = $data['lastName'];
+            $volunteer->email = $data['email'];
+            $volunteer->phone = $data['phone'];
+            $volunteer->locality = $data['locality'];
+
+            $manager->persist($volunteer);
+        }
+    }
+
 }

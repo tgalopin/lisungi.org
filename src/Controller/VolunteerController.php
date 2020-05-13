@@ -2,7 +2,6 @@
 
 namespace App\Controller;
 
-use App\Entity\Helper;
 use App\Entity\Volunteer;
 use App\Form\VolunteerType;
 use App\Repository\VolunteerRepository;
@@ -49,10 +48,10 @@ class VolunteerController extends AbstractController
 
     /**
      * @Route({
-     *     "fr_CD": "/je-peux-aider/{uuid}"
+     *     "fr_CD": "/benevole/{uuid}"
      * }, name="process_volunteer_view")
      */
-    public function view(Helper $volunteer, Request $request)
+    public function view(Volunteer $volunteer, Request $request)
     {
         return $this->render('process/volunteer_view.html.twig', [
             'volunteer' => $volunteer,
@@ -62,17 +61,17 @@ class VolunteerController extends AbstractController
 
     /**
      * @Route({
-     *     "fr_CD": "/je-peux-aider/{uuid}/supprimer"
+     *     "fr_CD": "/benevole/{uuid}/supprimer"
      * }, name="process_volunteer_delete_confirm")
      */
-    public function deleteConfirm(Helper $volunteer)
+    public function deleteConfirm(Volunteer $volunteer)
     {
         return $this->render('process/volunteer_delete_confirm.html.twig', ['volunteer' => $volunteer]);
     }
 
     /**
      * @Route({
-     *     "fr_CD": "/je-peux-aider/{uuid}/supprimer/do"
+     *     "fr_CD": "/benevole/{uuid}/supprimer/do"
      * }, name="process_volunteer_delete_do")
      */
     public function deleteDo(VolunteerRepository $repository, Volunteer $volunteer, Request $request)
@@ -88,7 +87,7 @@ class VolunteerController extends AbstractController
 
     /**
      * @Route({
-     *     "fr_CD": "/je-peux-aider/supprimer/effectue"
+     *     "fr_CD": "/benevole/supprimer/effectue"
      * }, name="process_volunteer_delete_done")
      */
     public function deleted()

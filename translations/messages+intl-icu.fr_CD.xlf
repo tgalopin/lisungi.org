@@ -348,6 +348,14 @@
                 <target>
                     <![CDATA[Vous pouvez supprimer votre proposition à tout moment si besoin.<br />Si vous souhaitez modifier votre proposition, supprimez-la puis recréez-en une à nouveau.]]></target>
             </trans-unit>
+            <trans-unit id="offer.volunteer.delete-any-time" resname="offer.volunteer.delete-any-time">
+                <source>
+                    Vous pouvez supprimer votre proposition à tout moment si besoin.
+                </source>
+                <target>
+                    Vous pouvez supprimer votre proposition à tout moment si besoin.
+                </target>
+            </trans-unit>
             <trans-unit id="offer.registration-date" resname="offer.registration-date">
                 <source>Vous avez enregistré votre proposition d'aide le {when}. Nous vous recontacterons dès que
                     quelqu'un aura besoin d'aide à proximité de vous.
