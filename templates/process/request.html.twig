@@ -2,6 +2,8 @@
 
 {% block title %}{{ 'label.request-help'|trans }} | {{ 'site.title'|trans }}{% endblock %}
 
+{% block javascripts encore_entry_script_tags('request') %}
+
 {% block content %}
     <div class="process-box">
         <div class="bg-light p-3 p-lg-4">
@@ -74,12 +76,12 @@
                 {% for type, fields in form.details %}
                     <hr />
 
-                    <div class="py-2 px-4">
+                    <div class="py-2 px-4 request-need">
                         <div class="row">
                             <div class="col-lg-5">
                                 {{ form_row(fields.need, {'label': ('label.need-'~type)|trans}) }}
                             </div>
-                            <div class="col-lg-7" style="opacity: 0.5;">
+                            <div class="col-lg-7 request-need-details" style="opacity: 0.5;">
                                 {% if type in ['masks', 'glasses', 'blouses'] %}
                                     {{ form_row(fields.quantity, {'label': 'help.need-how-many-units'|trans}) }}
                                     <div class="d-none">{{ form_row(fields.details) }}</div>
@@ -89,7 +91,7 @@
                                 {% elseif type in ['gloves'] %}
                                     {{ form_row(fields.quantity, {'label': 'help.need-how-many-pairs'|trans}) }}
                                     <div class="d-none">{{ form_row(fields.details) }}</div>
-                                % elseif type in ['other'] %}
+                                {% elseif type in ['other'] %}
                                     {{ form_row(fields.details, {'label': 'help.need-other'|trans}) }}
                                     <div class="d-none">{{ form_row(fields.quantity) }}</div>
                                 {% elseif type in ['food'] %}

@@ -25,34 +25,11 @@
                                 {{ 'offer.keep-link'|trans }}
                             </strong>
                         </p>
-                        {{ 'offer.delete-any-time'|trans }}
+                        {{ 'offer.delete-any-time'|trans|raw }}
                     </div>
 
                     <div class="process-block bg-white p-3 p-lg-4 mb-4">
                         {% trans with {'when': helper.createdAt|localizeddate('medium', 'short') } %}offer.registration-date{% endtrans %}
-                    </div>
-
-                    <div class="process-block bg-white p-3 p-lg-4 mb-4">
-                        <p>
-                            {{ 'offer.told-us'|trans }}
-                        </p>
-
-                        <ul>
-                            <li>
-                                {% if helper.canBuyGroceries or helper.acceptVulnerable %}
-                                    {{ 'offer.able-to-shop'|trans }}
-                                {% else %}
-                                    {{ 'offer.not-able-to-shop'|trans }}
-                                {% endif %}
-                            </li>
-                            <li>
-                                {% if helper.canBabysit %}
-                                    {% trans with {'max': helper.babysitMaxChildren } %}offer.able-to-babysit{% endtrans %}
-                                {% else %}
-                                    {{ 'offer.not-able-to-babysit'|trans }}
-                                {% endif %}
-                            </li>
-                        </ul>
                     </div>
 
                     <div class="process-block bg-white p-3 p-lg-4 mb-4">
@@ -90,7 +67,7 @@
 
                         <div class="mt-3">
                             <strong class="text-muted">
-                                {{ 'offer.delete-to-update'|trans }}
+                                {{ 'offer.delete-to-update'|trans|raw }}
                             </strong>
                         </div>
                     </div>

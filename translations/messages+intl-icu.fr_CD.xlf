@@ -356,30 +356,6 @@
                     quelqu'un aura besoin d'aide à proximité de vous.
                 </target>
             </trans-unit>
-            <trans-unit id="offer.told-us" resname="offer.told-us">
-                <source>Vous nous avez indiqué :</source>
-                <target>Vous nous avez indiqué :</target>
-            </trans-unit>
-            <trans-unit id="offer.able-to-shop" resname="offer.able-to-shop">
-                <source>pouvoir faire des courses pour quelqu'un et les livrer proche de chez vous.</source>
-                <target>pouvoir faire des courses pour quelqu'un et les livrer proche de chez vous.</target>
-            </trans-unit>
-            <trans-unit id="offer.not-able-to-shop" resname="offer.not-able-to-shop">
-                <source>ne pas être en capacité de faire des courses.</source>
-                <target>ne pas être en capacité de faire des courses.</target>
-            </trans-unit>
-            <trans-unit id="offer.able-to-babysit" resname="offer.able-to-babysit">
-                <source>pouvoir garder un enfant proche de chez vous, avec un maximum de {max} enfant(s) en garde à la
-                    fois.
-                </source>
-                <target>pouvoir garder un enfant proche de chez vous, avec un maximum de {max} enfant(s) en garde à la
-                    fois.
-                </target>
-            </trans-unit>
-            <trans-unit id="offer.not-able-to-babysit" resname="offer.not-able-to-babysit">
-                <source>ne pas être en capacité de garder un enfant.</source>
-                <target>ne pas être en capacité de garder un enfant.</target>
-            </trans-unit>
             <trans-unit id="offer.remove" resname="offer.remove">
                 <source>Supprimer ma proposition</source>
                 <target>Supprimer ma proposition</target>
