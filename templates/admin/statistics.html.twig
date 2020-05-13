@@ -5,7 +5,7 @@
 
 {% block main %}
     <div class="p-4">
-        <div class="row">
+        <div class="row justify-content-center">
             <div class="col-3 text-center">
                 <h1>
                     <strong>
@@ -13,20 +13,7 @@
                     </strong>
                 </h1>
                 <small class="text-uppercase">
-                    {{ 'admin.number-volunteers'|trans }}
-                </small>
-            </div>
-            <div class="col-3 text-center">
-                <h1>
-                    <strong>
-                        {{ countMatchedHelpers|number_format(0, ',', ' ') }}
-                    </strong>
-                    <small class="text-muted">
-                        ({{ ((countMatchedHelpers / countTotalHelpers) * 100)|number_format(2) }} %)
-                    </small>
-                </h1>
-                <small class="text-uppercase">
-                    {{ 'admin.number-matches'|trans }}
+                    Total number of helpers
                 </small>
             </div>
             <div class="col-3 text-center">
@@ -36,20 +23,17 @@
                     </strong>
                 </h1>
                 <small class="text-uppercase">
-                    {{ 'admin.number-requests'|trans }}
+                    Total number of help requests
                 </small>
             </div>
             <div class="col-3 text-center">
                 <h1>
                     <strong>
-                        {{ (countTotalOwners - countUnmatchedOwners)|number_format(0, ',', ' ') }}
+                        {{ countTotalVolunteers|number_format(0, ',', ' ') }}
                     </strong>
-                    <small class="text-muted">
-                        ({{ (((countTotalOwners - countUnmatchedOwners) / countTotalOwners) * 100)|number_format(2) }} %)
-                    </small>
                 </h1>
                 <small class="text-uppercase">
-                    {{ 'admin.number-requests-matched'|trans }}
+                    Total number of volunteers
                 </small>
             </div>
         </div>
@@ -59,27 +43,16 @@
         <div class="row">
             <div class="col-6">
                 <h3 class="p-2">
-                    Volontaires
+                    Helpers
                 </h3>
 
                 <canvas id="chart-helpers" style="height: 250px;"></canvas>
 
                 <hr />
 
-                <table class="table">
-                    <tr>
-                        <td class="border-0">
-                            Age moyen
-                        </td>
-                        <td class="border-0">
-                            {{ avgHelperAge|number_format(1, ',', ' ') }} ans
-                        </td>
-                    </tr>
-                </table>
-
                 <div class="p-2 mt-4">
                     <strong>
-                        Par département
+                        By locality
                     </strong>
                 </div>
 
@@ -87,8 +60,7 @@
                     {% for row in countHelpersByDepartment %}
                         <tr>
                             <td>
-                                {{ departments[row.department]|default('Département '~row.department) }}
-                                ({{ row.department }})
+                                {{ row.locality }}
                             </td>
                             <td>
                                 {{ row.nb|number_format(0, ',', ' ') }}
@@ -100,68 +72,16 @@
 
             <div class="col-6">
                 <h3 class="p-2">
-                    Demandeurs
+                    Help requests
                 </h3>
 
                 <canvas id="chart-requesters" style="height: 250px;"></canvas>
 
                 <hr />
 
-                <div class="p-2">
-                    <strong>
-                        Par type
-                    </strong>
-                </div>
-
-                <table class="table">
-                    <tr>
-                        <td>
-                            Nombre de demandes de courses
-                        </td>
-                        <td>
-                            {{ countGroceriesNeeds|number_format(0, ',', ' ') }}
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Nombre de demandes de babysitting
-                        </td>
-                        <td>
-                            {{ countBabysitAggregatedNeeds|number_format(0, ',', ' ') }}
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Nombre d'enfants concernés
-                        </td>
-                        <td>
-                            {{ countBabysitTotalNeeds|number_format(0, ',', ' ') }}
-                        </td>
-                    </tr>
-                </table>
-
                 <div class="p-2 mt-4">
                     <strong>
-                        {{ 'admin.by-job'|trans }}
-                    </strong>
-                </div>
-
-                <table class="table">
-                    {% for row in countOwnersByJobType %}
-                        <tr>
-                            <td>
-                                {{ row.job_type }}
-                            </td>
-                            <td>
-                                {{ row.nb|number_format(0, ',', ' ') }}
-                            </td>
-                        </tr>
-                    {% endfor %}
-                </table>
-
-                <div class="p-2 mt-4">
-                    <strong>
-                        {{ 'admin.by-department'|trans }}
+                        By locality
                     </strong>
                 </div>
 
@@ -169,8 +89,7 @@
                     {% for row in countOwnersByDepartment %}
                         <tr>
                             <td>
-                                {{ departments[row.department]|default('Département '~row.department) }}
-                                ({{ row.department }})
+                                {{ row.locality }}
                             </td>
                             <td>
                                 {{ row.nb|number_format(0, ',', ' ') }}

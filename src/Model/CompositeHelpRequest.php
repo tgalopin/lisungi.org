@@ -34,15 +34,10 @@ class CompositeHelpRequest
     public ?string $phone = null;
 
     /**
-     * @ORM\Column(length=50)
-     *
      * @Assert\NotBlank(message="locality.required")
      */
     public ?string $locality = '';
 
-    /**
-     * @ORM\Column(length=100, nullable=true)
-     */
     public ?string $organization = null;
 
     /**

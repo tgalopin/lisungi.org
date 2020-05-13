@@ -12,8 +12,8 @@ easy_admin:
             - { entity: 'Helper', label: 'Helpers', icon: 'users' }
             - { entity: 'HelpRequest', label: 'Help requests', icon: 'handshake-o' }
 
-            # - { label: 'Monitoring' }
-            # - { route: 'admin_statistics', label: 'Statistics', icon: 'chart-bar' }
+            - { label: 'Monitoring' }
+            - { route: 'admin_statistics', label: 'Statistics', icon: 'chart-bar' }
             # - { route: 'admin_unmatched_list', label: 'Unmatched needs', icon: 'search' }
 
             # - { label: 'Maps' }
