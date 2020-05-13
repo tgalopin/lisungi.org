@@ -100,31 +100,33 @@
         </div>
 
         <div class="home-row-full bg-warning">
-            <div class="row justify-content-center">
-                <div class="col-12 col-lg-10">
-                    <div class="m-4 p-3 mx-lg-5 p-lg-5">
-                        <a href="{{ path('process_volunteer') }}" class="home-row-half-button text-dark">
-                            <div class="home-row-half-button-icon d-none d-lg-block">
-                                {{ include('_icons/arrow.html.twig') }}
-                            </div>
-                            <div class="home-row-half-button-label">
-                                {{ 'home.volunteer'|trans }}
-                            </div>
-                        </a>
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-10">
+                        <div class="m-4 p-3 mx-lg-5 p-lg-5">
+                            <a href="{{ path('process_volunteer') }}" class="home-row-half-button text-dark">
+                                <div class="home-row-half-button-icon d-none d-lg-block">
+                                    {{ include('_icons/arrow.html.twig') }}
+                                </div>
+                                <div class="home-row-half-button-label">
+                                    {{ 'home.volunteer'|trans }}
+                                </div>
+                            </a>
 
-                        <div class="home-row-half-details mt-3 mb-4">
-                            <p>
-                                {{ 'home.volunteer.young-healthy'|trans }}
-                            </p>
-                            {{ 'home.volunteer.intro'|trans }}
-                        </div>
+                            <div class="home-row-half-details mt-3 mb-4">
+                                <p>
+                                    {{ 'home.volunteer.young-healthy'|trans }}
+                                </p>
+                                {{ 'home.volunteer.intro'|trans }}
+                            </div>
 
-                        <div class="row no-gutters text-center">
-                            <div class="col-12 col-xl-auto">
-                                <a href="{{ path('process_volunteer') }}"
-                                   class="btn btn-warning border border-dark btn-lg text-dark mr-xl-3">
-                                    {{ 'label.offer-help'|trans }}
-                                </a>
+                            <div class="row no-gutters text-center">
+                                <div class="col-12 col-xl-auto">
+                                    <a href="{{ path('process_volunteer') }}"
+                                       class="btn btn-warning border border-dark btn-lg text-dark mr-xl-3">
+                                        {{ 'label.offer-help'|trans }}
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
