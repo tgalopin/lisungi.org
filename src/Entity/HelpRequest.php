@@ -88,12 +88,12 @@ class HelpRequest
     /**
      * @ORM\Column(length=50)
      */
-    public ?string $type;
+    public string $type;
 
     /**
      * @ORM\Column(type="integer")
      */
-    public ?int $quantity = 0;
+    public int $quantity = 0;
 
     /**
      * @ORM\Column(length=250, nullable=true)

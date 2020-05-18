@@ -76,32 +76,32 @@ class Helper
     /**
      * @ORM\Column(type="integer")
      */
-    public ?int $masks = 0;
+    public int $masks = 0;
 
     /**
      * @ORM\Column(type="integer")
      */
-    public ?int $glasses = 0;
+    public int $glasses = 0;
 
     /**
      * @ORM\Column(type="integer")
      */
-    public ?int $blouses = 0;
+    public int $blouses = 0;
 
     /**
      * @ORM\Column(type="integer")
      */
-    public ?int $gel = 0;
+    public int $gel = 0;
 
     /**
      * @ORM\Column(type="integer")
      */
-    public ?int $gloves = 0;
+    public int $gloves = 0;
 
     /**
      * @ORM\Column(type="integer")
      */
-    public ?int $soap = 0;
+    public int $soap = 0;
 
     /**
      * @ORM\Column(length=250, nullable=true)
