@@ -78,6 +78,7 @@ class CompositeHelpRequest
             $request->firstName = $this->firstName;
             $request->lastName = $this->lastName;
             $request->email = strtolower($this->email);
+            $request->phone = $this->phone;
             $request->organization = $this->organization;
             $request->locality = $this->locality;
             $request->type = $detail->getType();
