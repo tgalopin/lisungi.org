@@ -81,7 +81,7 @@ class CompositeHelpRequest
             $request->organization = $this->organization;
             $request->locality = $this->locality;
             $request->type = $detail->getType();
-            $request->quantity = $detail->quantity;
+            $request->quantity = (int) $detail->quantity;
             $request->details = $detail->details;
 
             $requests[] = $request;

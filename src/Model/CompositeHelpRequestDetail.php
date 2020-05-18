@@ -7,7 +7,7 @@ class CompositeHelpRequestDetail
     private string $type;
 
     public ?bool $need = false;
-    public ?int $quantity = null;
+    public ?int $quantity = 0;
     public ?string $details = null;
 
     public function __construct(string $type)
