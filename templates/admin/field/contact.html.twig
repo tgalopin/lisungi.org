@@ -1,0 +1,8 @@
+<a href="mailto:{{ item.email }}">{{ item.email }}</a>
+
+{% if item.phone %}
+    <div class="text-muted mt-1">
+        <em>Phone :</em>
+        <a href="tel:{{ item.phone }}">{{ item.phone }}</a>
+    </div>
+{% endif %}

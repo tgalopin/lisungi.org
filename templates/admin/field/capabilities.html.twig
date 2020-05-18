@@ -1,0 +1,13 @@
+<div style="width: 280px;">
+    {% for type in ['masks', 'glasses', 'blouses', 'gel', 'gloves', 'soap', 'food', 'other'] %}
+        {% set typeValue = attribute(item, type) %}
+
+        <div style="font-size: 11px;">
+            {% if not typeValue %}
+                <del class="text-muted">{{ type|title }}: none</del>
+            {% else %}
+                <strong>{{ type|title }}: {{ typeValue }}</strong>
+            {% endif %}
+        </div>
+    {% endfor %}
+</div>

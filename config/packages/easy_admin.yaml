@@ -6,11 +6,10 @@ easy_admin:
             - { route: 'homepage', label: 'Back to the website', icon: 'home' }
             - { route: 'security_logout', label: 'Log out', icon: 'sign-out' }
 
-            - { label: 'Matchings' }
-            # - { route: 'admin_matches', label: 'Matches', icon: 'check' }
-            # - { route: 'admin_match_history', label: 'History', icon: 'history' }
+            - { label: 'Users' }
             - { entity: 'Helper', label: 'Helpers', icon: 'users' }
-            - { entity: 'HelpRequest', label: 'Help requests', icon: 'handshake-o' }
+            - { entity: 'HelpRequest', label: 'Help requests', icon: 'medkit' }
+            - { entity: 'Volunteer', label: 'Volunteers', icon: 'handshake-o' }
 
             - { label: 'Monitoring' }
             - { route: 'admin_statistics', label: 'Statistics', icon: 'chart-bar' }
@@ -28,21 +27,30 @@ easy_admin:
     entities:
         Helper:
             class: App\Entity\Helper
-            disabled_actions: ['show', 'new']
+            disabled_actions: ['show', 'new', 'edit']
             list:
                 title: Helpers
                 max_results: 100
                 sort: ['createdAt', 'DESC']
                 actions:
-                    - { name: 'edit', template: 'admin/actions/edit_helper.html.twig' }
-                    - { name: 'delete', template: 'admin/actions/delete_helper.html.twig' }
                 fields:
                     - id
-                    - { property: 'locality', label: 'Commune' }
-                    - { property: 'firstName', label: 'First name' }
-                    - { property: 'lastName', label: 'Last name' }
-                    - { property: 'email', label: 'E-mail' }
-                    - { property: 'phone', label: 'Phone' }
+                    - { property: 'firstName', label: 'Profile', template: 'admin/field/profile.html.twig' }
+                    - { property: 'email', label: 'Contact details', template: 'admin/field/contact.html.twig' }
+                    - { property: 'masks', label: 'Capabilities', template: 'admin/field/capabilities.html.twig', sortable: false }
+                    - { property: 'createdAt', label: 'Date' }
+
+        Volunteer:
+            class: App\Entity\Volunteer
+            disabled_actions: ['show', 'new', 'edit']
+            list:
+                title: Volunteers
+                max_results: 100
+                sort: ['createdAt', 'DESC']
+                fields:
+                    - id
+                    - { property: 'firstName', label: 'Profile', template: 'admin/field/profile.html.twig' }
+                    - { property: 'email', label: 'Contact details', template: 'admin/field/contact.html.twig' }
                     - { property: 'createdAt', label: 'Date' }
 
         HelpRequest:
@@ -54,10 +62,7 @@ easy_admin:
                 sort: ['createdAt', 'DESC']
                 fields:
                     - id
-                    - { property: 'locality', label: 'Commune' }
                     - { property: 'type', label: 'Type' }
-                    - { property: 'firstName', label: 'First name' }
-                    - { property: 'lastName', label: 'Last name' }
-                    - { property: 'email', label: 'E-mail' }
-                    - { property: 'phone', label: 'Phone' }
+                    - { property: 'firstName', label: 'Profile', template: 'admin/field/profile.html.twig' }
+                    - { property: 'email', label: 'Contact details', template: 'admin/field/contact.html.twig' }
                     - { property: 'createdAt', label: 'Date' }
