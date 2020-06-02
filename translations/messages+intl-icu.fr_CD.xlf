@@ -159,19 +159,17 @@
                 <target>Pasi na Yo Pasi na Ngai.</target>
             </trans-unit>
             <trans-unit id="home.work-title" resname="home.work-title">
-                <source>Je travaille en première ligne et j'ai besoin de matériel de protection ou de denrées alimentaires</source>
-                <target>Je travaille en première ligne et j'ai besoin de matériel de protection ou de denrées alimentaires</target>
+                <source>Je travaille en première ligne ou je fais parti des personnes vulnérables et j'ai besoin d'aide</source>
+                <target>Je travaille en première ligne ou je fais parti des personnes vulnérables et j'ai besoin d'aide</target>
             </trans-unit>
             <trans-unit id="home.work-intro" resname="home.work-intro">
                 <source>
-                    Vous êtes professionnel ou une organisation de santé en première ligne de la lutte contre
-                    le virus (personnels soignants, membres de la cellule nationale de riposte, centre de prise
-                    en charge des patients à pathologies chroniques (diabétique, anémique), ...) ?
+                    Vous êtes un professionnel en première ligne (soignants, services d’urgence, travailleurs
+                    essentiels)  ou une personne vulnérable au virus de par l'âge ou la condition ?
                 </source>
                 <target>
-                    Vous êtes professionnel ou une organisation de santé en première ligne de la lutte contre
-                    le virus (personnels soignants, membres de la cellule nationale de riposte, centre de prise
-                    en charge des patients à pathologies chroniques (diabétique, anémique), ...) ?
+                    Vous êtes un professionnel en première ligne (soignants, services d’urgence, travailleurs
+                    essentiels)  ou une personne vulnérable au virus de par l'âge ou la condition ?
                 </target>
             </trans-unit>
             <trans-unit id="home.work-request" resname="home.work-request">
@@ -266,12 +264,12 @@
             </trans-unit>
             <trans-unit id="offer.intro-four" resname="offer.intro-four">
                 <source>
-                    ATTENTION : Lisungi.org a pour objectif de venir en aide aux professionnels de santé en première
-                    ligne contre le virus dans une démarche de dons solidaire.
+                    Attention : lisungi.org a pour objectif de venir en aide aux professionnels de santé en première
+                    ligne et aux personnes vulnérables au virus dans une démarche de dons solidaire.
                 </source>
                 <target>
-                    ATTENTION : Lisungi.org a pour objectif de venir en aide aux professionnels de santé en première
-                    ligne contre le virus dans une démarche de dons solidaire.
+                    Attention : lisungi.org a pour objectif de venir en aide aux professionnels de santé en première
+                    ligne et aux personnes vulnérables au virus dans une démarche de dons solidaire.
                 </target>
             </trans-unit>
             <trans-unit id="offer.intro-five" resname="offer.intro-five">
@@ -713,12 +711,12 @@
             </trans-unit>
             <trans-unit id="label.confirm_health" resname="label.confirm_health">
                 <source>
-                    Je certifie être un professionnel de santé en première ligne avec
-                    un besoin réel de matériel de protection ou de denrées alimentaires.
+                    Je certifie être un professionnel de santé en première ligne ou une personne
+                    vulnérable à l'épidémie avec un besoin réel de matériel de protection ou de denrées alimentaires.
                 </source>
                 <target>
-                    Je certifie être un professionnel de santé en première ligne avec
-                    un besoin réel de matériel de protection ou de denrées alimentaires.
+                    Je certifie être un professionnel de santé en première ligne ou une personne
+                    vulnérable à l'épidémie avec un besoin réel de matériel de protection ou de denrées alimentaires.
                 </target>
             </trans-unit>
             <trans-unit id="label.confirm_volunteer" resname="label.confirm_volunteer">
